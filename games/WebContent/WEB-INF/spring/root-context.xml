@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cache="http://www.springframework.org/schema/cache"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jee="http://www.springframework.org/schema/jee" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="
+			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+			http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+			http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-2.5.xsd
+			http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+			http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache.xsd
+			http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.1.xsd">
+
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+	<bean
+        class="org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor">
+    </bean>
+    <bean
+        class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor">
+    </bean>
+	<bean
+		class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping" />
+	<context:annotation-config />
+	<context:component-scan base-package="com.zhc.sys.action.*" />
+	<context:component-scan base-package="com.zhc.manage.action.*" />
+	
+	<!--  <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+	  	 <property name="driverClassName">
+	       <value>com.mysql.jdbc.Driver</value>
+	    </property>
+	    <property name="url">
+	       <value>jdbc:mysql://192.168.2.56:3306/zhc?characterEncoding=utf-8</value>
+	    </property>
+	    <property name="username">
+	       <value>root</value>
+	    </property>
+	    <property name="password">
+	       <value>root</value>
+	    </property>
+    </bean> -->
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close"> 
+	      <!-- 基本属性 url、user、password -->
+	      
+	   <!--   <property name="driverClassName" value="com.mysql.jdbc.ReplicationDriver"/>
+	      <property name="url" value="jdbc:mysql:replication://192.168.2.56,192.168.2.108/zhc?characterEncoding=utf-8&amp;autoReconnect=true&amp;roundRobinLoadBalance=true" />
+	       -->
+ 	     <property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url"
+			value="jdbc:mysql://127.0.0.1:3306/zhc_games?characterEncoding=utf-8" />
+		<property name="username" value="root" />
+		<property name="password" value="" />
+
+		<!-- 配置初始化大小、最小、最大 -->
+		<property name="initialSize" value="1" />
+		<property name="minIdle" value="1" />
+		<property name="maxActive" value="5" />
+
+		<!-- 配置获取连接等待超时的时间 -->
+		<property name="maxWait" value="60000" />
+
+		<!-- 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒 -->
+		<property name="timeBetweenEvictionRunsMillis" value="60000" />
+
+		<!-- 配置一个连接在池中最小生存的时间，单位是毫秒 -->
+		<property name="minEvictableIdleTimeMillis" value="300000" />
+	
+	      <property name="validationQuery" value="SELECT 'x'" />
+	      <property name="testWhileIdle" value="true" />
+	      <property name="testOnBorrow" value="false" />
+	      <property name="testOnReturn" value="false" />
+	
+	      <!-- 打开PSCache，并且指定每个连接上PSCache的大小 -->
+	      <property name="poolPreparedStatements" value="true" />
+	      <property name="maxPoolPreparedStatementPerConnectionSize" value="20" />
+	
+	      <!-- 配置监控统计拦截的filters -->
+	      <property name="filters" value="stat" />
+	</bean>
+
+    <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+    	<property name="persistenceXmlLocation" value="classpath:/META-INF/persistence.xml" />
+        <property name="dataSource" ref="dataSource" />
+        <property name="persistenceUnitName" value="zhc" />
+        <property name="jpaVendorAdapter">  
+            <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
+            	<property name="database" value="MYSQL" />
+                <property name="showSql" value="true" />
+                <property name="generateDdl" value="true" />
+                 <property name="databasePlatform" value="org.hibernate.dialect.MySQL5Dialect">
+        		</property>
+            </bean>
+        </property>
+    </bean>
+    
+    <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">  
+	    <property name="dataSource" ref="dataSource" />  
+	    <property name="entityManagerFactory" ref="entityManagerFactory" />
+    </bean>
+	
+	<aop:aspectj-autoproxy />
+    <tx:annotation-driven transaction-manager="transactionManager" order="10"/>
+	
+	
+	<bean id="appProps" class="com.zhc.util.AppProps">
+		<property name="properties">
+			<props>				
+			</props>
+		</property>
+	</bean>
+   
+	
+</beans>
