@@ -35,6 +35,12 @@
 		autowire="byName">
 	</bean>
 	
+	<bean id="gameService" class="com.zhc.games.service.GameServiceImpl"
+		autowire="byName">
+	</bean>
 	
+	<bean id="serialNumberService" class="com.zhc.games.service.SerialNumberServiceImpl"
+		autowire="byName">
+	</bean>
 
 </beans>
