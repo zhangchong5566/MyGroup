@@ -178,6 +178,7 @@ public class GameAction extends BaseAction {
 			sn = snService.getByNumber(snStr);
 			if(sn!=null){
 				Date now = DateUtil.getFormatedDateString(8);//获取北京时间
+				System.out.println(">>>>>>"+DateUtil.formatDate(now, "yyyy-MM-dd HH:mm:ss")+"  "+snStr);
 				Date beginDate = sn.getBeginDate();
 				Date endDate = sn.getEndDate();
 				if(beginDate.getTime()<=now.getTime() && endDate.getTime()>=now.getTime()){
