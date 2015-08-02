@@ -22,9 +22,15 @@ public class SerialNumber extends AbstractEntityGenerate{
 	
 	private String serialNumber;//手机串号
 	
+	private String price;//售价
+	
+	private Integer type;//授权的脚本类型，0-All，1-单开，2-双开，3-三开
+	
 	private Date beginDate;//有效期开始
 	
 	private Date endDate;//有效期结束
+	
+	private String remark;//备注
 	
 	private Date createDate;
 
@@ -67,6 +73,30 @@ public class SerialNumber extends AbstractEntityGenerate{
 
 	public void setCreateDate(Date createDate) {
 		this.createDate = createDate;
+	}
+
+	public Integer getType() {
+		return type;
+	}
+
+	public void setType(Integer type) {
+		this.type = type;
+	}
+
+	public String getRemark() {
+		return remark;
+	}
+
+	public void setRemark(String remark) {
+		this.remark = remark;
+	}
+
+	public String getPrice() {
+		return price;
+	}
+
+	public void setPrice(String price) {
+		this.price = price;
 	}
 	
 	

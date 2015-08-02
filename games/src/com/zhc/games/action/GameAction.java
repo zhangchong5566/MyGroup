@@ -156,6 +156,10 @@ public class GameAction extends BaseAction {
 				e.printStackTrace();
 			}
 			
+			bean.setType(sn.getType());
+			bean.setRemark(sn.getRemark());
+			bean.setPrice(sn.getPrice());
+			
 			if(bean.getId() != null && bean.getId() > 0){
 				snService.update(bean);
 			}else{
@@ -173,6 +177,7 @@ public class GameAction extends BaseAction {
 	@Action(value = "/checkSN")
 	public void checkSN(){
 		String snStr = super.getStr("s");
+		int type = super.getIntParamter("t", -1);
 		result = "0";
 		if(StringUtils.isNotBlank(snStr)){
 			sn = snService.getByNumber(snStr);
@@ -181,8 +186,8 @@ public class GameAction extends BaseAction {
 				System.out.println(">>>>>>"+DateUtil.formatDate(now, "yyyy-MM-dd HH:mm:ss")+"  "+snStr);
 				Date beginDate = sn.getBeginDate();
 				Date endDate = sn.getEndDate();
-				if(beginDate.getTime()<=now.getTime() && endDate.getTime()>=now.getTime()){
-					result = "1";//在有效期内
+				if(beginDate.getTime()<=now.getTime() && endDate.getTime()>=now.getTime() && (sn.getType()==0||type == sn.getType())){
+					result = "1";//在有效期内并且购买的脚本类型符合设置
 				}
 				
 			}

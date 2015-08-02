@@ -60,6 +60,25 @@ table td {
 								style='color: red' class='msg'></span></td>
 						</tr>
 						<tr>
+							<td>脚本类型：</td>
+							<td>
+								<select name="sn.type">
+									<option value="0">所有</option>
+									<option value="1" ${sn.type==1?"selected":""}>单开</option>
+									<option value="2" ${sn.type==2?"selected":""}>双开</option>
+									<option value="3" ${sn.type==3?"selected":""}>三开</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td>价格：</td>
+							<td><input type="text" name="sn.price"
+								id="price"
+								class="m-wrap small"
+								value="${sn.price}" style="width: 200px !important;" /> <span
+								style='color: red' class='msg'></span></td>
+						</tr>
+						<tr>
 							<td>有效期：</td>
 							<td><input name="beginDate" id="beginDate" class="Wdate"
 								style="width: 150px; height: 25px;" type="text"
@@ -71,6 +90,14 @@ table td {
 								onfocus="WdatePicker({skin:'whyGreen',dateFmt:'yyyy-MM-dd HH:mm:ss'})" />
 
 							</td>
+						</tr>
+						<tr>
+							<td>备注：</td>
+							<td><input type="text" name="sn.remark"
+								id="remark"
+								class="m-wrap small {required:false,url:false}"
+								value="${sn.remark}" style="width:97% !important;"/> <span
+								style='color: red' class='msg'></span></td>
 						</tr>
 					</table>
 

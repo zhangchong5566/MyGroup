@@ -11,7 +11,7 @@ public class ActionForm {
 	private String gameName;
 	
 	private String serialNumber;
-
+	
 	public Long getId() {
 		return id;
 	}

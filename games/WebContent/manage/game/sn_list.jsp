@@ -39,8 +39,11 @@
 							<th>ID</th>
 							<th>游戏</th>
 							<th>手机序列号</th>
+							<th>脚本类型</th>
+							<th>价格</th>
 							<th>有效期开始</th>
 							<th>有效期结束</th>
+							<th>备注</th>
 							<th>Edit</th>
 						</tr>
 					</thead>
@@ -79,8 +82,22 @@
 				{ "mData": "id","bSortable": true},
 				{ "mData": "game.gname","bSortable": false},
 				{ "mData": "serialNumber","bSortable": false},
+				{ "mData": "type","mRender" : function(data, type, full) {
+					if(data == "0"){
+						return "所有";
+					}else if(data == "1"){
+						return "单开";
+					}else if(data =="2"){
+						return "双开";
+					}else if(data == "3"){
+						return "三开";
+					}
+					return "";	
+				}},
+				{"mData" : "price","mRender":strDefRender},
 				{"mData" : "beginDate","mRender":datetimeRender},
 				{"mData" : "endDate","mRender":datetimeRender},
+				{"mData" : "remark","mRender":strDefRender},
 				{
 					"mData" : "id","mRender" : function(data, type, full) {
 						return "<a href='toEditSN.do?id="+data+"&TB_iframe=true&height=450&width=700'  class='thickbox edit' title='修改'>修改</a>";	
