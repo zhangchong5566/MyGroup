@@ -12,5 +12,6 @@ public interface GameService  extends BaseJpaServiceInterf{
 	public static final String ID_NAME = "gameService";
 	
 	public List<Game> listGame(ActionForm form,Pages pages);
+	
 
 }

@@ -174,6 +174,20 @@ public class GameAction extends BaseAction {
 		return SUCCESS;
 	}
 	
+	@Action(value = "/manage/game/deleteSN", results = { @Result(name = SUCCESS, type="json",params={"ignoreHierarchy","false"})})
+	public String deleteSN(){
+		
+		long id = super.getLongParamter("id", 0);
+		if(id > 0){
+			snService.delete(SerialNumber.class, id);
+		}
+		
+		result = "删除成功！";
+		return SUCCESS;
+		
+	}
+
+	
 	@Action(value = "/checkSN")
 	public void checkSN(){
 		String snStr = super.getStr("s");
@@ -200,7 +214,6 @@ public class GameAction extends BaseAction {
 		
 	}
 	
-
 
 	public List<Game> getGameList() {
 		return gameList;

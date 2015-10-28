@@ -100,7 +100,9 @@
 				{"mData" : "remark","mRender":strDefRender},
 				{
 					"mData" : "id","mRender" : function(data, type, full) {
-						return "<a href='toEditSN.do?id="+data+"&TB_iframe=true&height=450&width=700'  class='thickbox edit' title='修改'>修改</a>";	
+						s = "<a href='toEditSN.do?id="+data+"&TB_iframe=true&height=450&width=700'  class='thickbox edit' title='修改'>修改</a>";
+						s+=" <a href='javascript:deleteSN("+data+")'  title='删除'>删除</a>";
+						return s;
 					}
 				}
              ]
@@ -152,6 +154,22 @@
 		    myTable.fnDraw();
 		    
 		}
+	 
+	 function deleteSN(id){
+		 if(!confirm("确认删除这个序列号码？")){
+			 return;
+		 }
+		 $.ajax({
+             type: "POST",
+             url: "deleteSN.do",
+             data: {id:id},
+             dataType: "json",
+             success: function(data){
+                  alert(data.result);
+                  myTable.fnDraw();
+             }
+         });
+	 }
 	
 	
 </script>

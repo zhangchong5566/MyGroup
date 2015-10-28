@@ -42,5 +42,8 @@
 	<bean id="serialNumberService" class="com.zhc.games.service.SerialNumberServiceImpl"
 		autowire="byName">
 	</bean>
+	<bean id="accountService" class="com.zhc.games.service.AccountServiceImpl"
+		autowire="byName">
+	</bean>
 
 </beans>
