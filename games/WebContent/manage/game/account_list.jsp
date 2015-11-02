@@ -22,7 +22,7 @@
 					       <div>
 					       		<div style="padding:5px;float:left;">
 									<span>
-									<a class="btn blue" id="add" href="toEditAccount.do" title="增加账号"  target='_blank'><i class="icon-edit"></i> 增加账号</a>
+									<a class="btn blue thickbox" id="add" href="toEditAccount.do?TB_iframe=true&height=350&width=700" title="增加账号" ><i class="icon-edit"></i> 增加用戶</a>
 									</span>
 								</div>
 					        </div>
@@ -34,7 +34,7 @@
 					<thead>
 						<tr>
 							<th>游戏</th>
-							<th>账号标记</th>
+							<th>用戶标记</th>
 							<th>当前账号序号</th>
 							<th>备注</th>
 							<th>Edit</th>
@@ -78,7 +78,8 @@
 				{"mData" : "remark","mRender":strDefRender},
 				{
 					"mData" : "id","mRender" : function(data, type, full) {
-						return "<a href='toEditAccount.do?id="+data+"' title='修改' target='_blank'>Edit</a>";	
+						return "<a class='btn blue edit' href='toEditAccount.do?id="+data+"&TB_iframe=true&height=350&width=700' title='修改'>修改</a>&nbsp;&nbsp;"
+								+"<a class='btn green' href='toAccountDetail.do?id="+data+"&TB_iframe=true&height=350&width=700' title='账号设置' target='_blank'>账号设置</a>";
 					}
 				}
              ]
@@ -109,6 +110,7 @@
 	 
 	 function refresh(){
 		 myTable.fnDraw();
+		 tb_remove();
 	}
 	 
 	 

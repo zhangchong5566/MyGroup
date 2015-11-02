@@ -36,6 +36,7 @@ public class AccountAction extends BaseAction {
 	private Account account;
 	private List<Account> accountList;
 	private List<AccountDetail> detailList;
+	private AccountDetail accountDetail;
 	private List<Game> gameList;
 	
 	private String result;
@@ -67,12 +68,25 @@ public class AccountAction extends BaseAction {
 		long id = super.getLongParamter("id", 0l);
 		if(id > 0){
 			account = accountService.find(Account.class, id);
-			detailList = accountService.listDetail(id);
 		}
 		if(form == null){
 			form = new ActionForm();
 		}
 		gameList = gameService.listGame(form, null);
+		return SUCCESS;
+	}
+	
+	
+	@Action(value = "/manage/game/toAccountDetail", results = { @Result(name = SUCCESS, location = "/manage/game/account_detail.jsp")})
+	public String toAccountDetail(){
+		long id = super.getLongParamter("id", 0l);
+		if(id > 0){
+			account = accountService.find(Account.class, id);
+			detailList = accountService.listDetail(id);
+		}
+		if(form == null){
+			form = new ActionForm();
+		}
 		return SUCCESS;
 	}
 	
@@ -84,8 +98,6 @@ public class AccountAction extends BaseAction {
 			
 			long gameId = super.getLongParamter("gameId", 0);
 			
-			int maxNum = super.getIntParamter("maxNum", 0);
-			
 			Account bean = null;
 			if(account.getId() != null && account.getId() > 0){
 				bean = accountService.find(Account.class, account.getId());
@@ -95,19 +107,23 @@ public class AccountAction extends BaseAction {
 			
 			bean.setGame(gameService.find(Game.class, gameId));
 			bean.setUserTag(account.getUserTag());
+			bean.setCurrIndex(account.getCurrIndex());
 			bean.setRemark(account.getRemark());
-			
-			detailList = new ArrayList<>();
-			AccountDetail detail = null;
-			for(int i = 1;i<= maxNum;i++){
-				detail = new AccountDetail();
-				detail.setAccount(bean);
-				detail.setAdindex(i);
-				detail.setContent(super.getStr("content_"+i));
-				detailList.add(detail);
+			if(bean.getId() != null && bean.getId() > 0){
+				accountService.update(bean);
+			}else{
+				//初始化20个账号明细
+				detailList = new ArrayList<AccountDetail>();
+				AccountDetail detail = null;
+				for(int i = 0;i < 20;i++){
+					detail = new AccountDetail();
+					detail.setAccount(bean);
+					detail.setAdindex(i+1);
+					detailList.add(detail);
+				}
+				accountService.save(bean, detailList);
 			}
 			
-			accountService.save(bean,detailList);
 			result = "保存成功！";
 		}else{
 			result = "不允许空值";
@@ -116,6 +132,46 @@ public class AccountAction extends BaseAction {
 		
 		return SUCCESS;
 	}
+	
+	
+	@Action(value = "/manage/game/toEditAccountDetail", results = { @Result(name = SUCCESS, location = "/manage/game/account_detail_edit.jsp")})
+	public String toEditAccountDetail(){
+		Long accountId = super.getLongParamter("accountId", 0);
+		int adindex = super.getIntParamter("adindex", -1);
+		
+		accountDetail = accountService.getDetail(accountId, adindex);
+		
+		return SUCCESS;
+	}
+	
+
+	@Action(value = "/manage/game/saveAccountDetail", results = { @Result(name = SUCCESS, type="json",params={"ignoreHierarchy","false"})})
+	public String saveAccountDetail(){
+		
+		Long accountId = super.getLongParamter("accountId", 0);
+		int adindex = super.getIntParamter("adindex", -1);
+		Long detailId = super.getLongParamter("detailId", 0);
+		
+		if(detailId > 0){
+			accountDetail = accountService.find(AccountDetail.class, detailId);
+		}else{
+			accountDetail = new AccountDetail();
+		}
+		accountDetail.setAccount(accountService.find(Account.class, accountId));
+		accountDetail.setAdindex(adindex);
+		accountDetail.setContent(super.getStr("content"));
+		
+		if(accountDetail.getId()!=null && accountDetail.getId() > 0){
+			accountService.update(accountDetail);
+		}else{
+			accountService.create(accountDetail);
+		}
+		
+		result = "SUCCESS";
+		
+		return SUCCESS;
+	}
+	
 	
 	@Action(value = "/updateCurrIndex")
 	public void updateCurrIndex(){
@@ -249,6 +305,16 @@ public class AccountAction extends BaseAction {
 
 	public void setGameList(List<Game> gameList) {
 		this.gameList = gameList;
+	}
+
+
+	public AccountDetail getAccountDetail() {
+		return accountDetail;
+	}
+
+
+	public void setAccountDetail(AccountDetail accountDetail) {
+		this.accountDetail = accountDetail;
 	}
 	
 

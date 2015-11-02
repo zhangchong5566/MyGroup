@@ -22,7 +22,7 @@
 					       <div>
 					       		<div style="padding:5px;float:left;">
 									<span>
-									<a class="btn blue thickbox" id="add" href="toEditGame.do?TB_iframe=true&height=350&width=700" title="Add Game"><i class="icon-edit"></i> Add Game</a>
+									<a class="btn blue thickbox" id="add" href="toEditGame.do?TB_iframe=true&height=350&width=750" title="Add Game"><i class="icon-edit"></i> Add Game</a>
 									</span>
 								</div>
 					        </div>
@@ -76,7 +76,7 @@
 				{"mData" : "createDate","mRender":datetimeRender},
 				{
 					"mData" : "id","mRender" : function(data, type, full) {
-						return "<a href='toEditGame.do?id="+data+"&TB_iframe=true&height=350&width=700'  class='thickbox edit' title='Edit Game'>Edit</a>";	
+						return "<a href='toEditGame.do?id="+data+"&TB_iframe=true&height=350&width=750'  class='thickbox edit' title='Edit Game'>Edit</a>";	
 					}
 				}
              ]

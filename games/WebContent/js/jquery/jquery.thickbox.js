@@ -6,16 +6,15 @@
 */
 
 var tb_pathToImage = cxp+"/img/loadingAnimation.gif";
-
+staticFileRoot = cxp;
 if ("undefined" != typeof staticFileRoot)
     //tb_pathToImage = staticFileRoot + tb_pathToImage;
-
+	
 
 /*!!!!!!!!!!!!!!!!! edit below this line at your own risk !!!!!!!!!!!!!!!!!!!!!!!*/
 
 //on page load call tb_init
 $(document).ready(function () {
-	
 	imgLoader = new Image();// preload image
 	imgLoader.src = tb_pathToImage;
 	tb_init('a.thickbox, area.thickbox, input.thickbox');//pass where to apply thickbox
