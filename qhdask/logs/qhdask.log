@@ -1,0 +1,826 @@
+2015-11-09 21:47:01,756 INFO [org.springframework.web.context.ContextLoader] - <Root WebApplicationContext: initialization started>
+2015-11-09 21:47:01,915 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - <Refreshing Root WebApplicationContext: startup date [Mon Nov 09 21:47:01 CST 2015]; root of context hierarchy>
+2015-11-09 21:47:01,955 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/root-context.xml]>
+2015-11-09 21:47:02,319 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/service.spring.xml]>
+2015-11-09 21:47:02,342 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/mail.spring.xml]>
+2015-11-09 21:47:02,362 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/scheduler.spring.xml]>
+2015-11-09 21:47:02,385 INFO [org.springframework.beans.factory.support.DefaultListableBeanFactory] - <Overriding bean definition for bean 'scheduleService': replacing [Generic bean: class [com.zhc.schedule.quartz.service.ScheduleServiceImpl]; scope=; abstract=false; lazyInit=false; autowireMode=1; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in ServletContext resource [/WEB-INF/spring/service.spring.xml]] with [Generic bean: class [com.zhc.schedule.quartz.service.ScheduleServiceImpl]; scope=; abstract=false; lazyInit=false; autowireMode=1; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in ServletContext resource [/WEB-INF/spring/scheduler.spring.xml]]>
+2015-11-09 21:47:02,548 INFO [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] - <JSR-330 'javax.inject.Inject' annotation found and supported for autowiring>
+2015-11-09 21:47:03,608 INFO [com.alibaba.druid.pool.DruidDataSource] - <{dataSource-1} inited>
+2015-11-09 21:47:03,683 INFO [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] - <Building JPA container EntityManagerFactory for persistence unit 'zhc'>
+2015-11-09 21:47:03,708 INFO [org.hibernate.jpa.internal.util.LogHelper] - <HHH000204: Processing PersistenceUnitInfo [
+	name: zhc
+	...]>
+2015-11-09 21:47:03,824 INFO [org.hibernate.Version] - <HHH000412: Hibernate Core {4.3.5.Final}>
+2015-11-09 21:47:03,826 INFO [org.hibernate.cfg.Environment] - <HHH000206: hibernate.properties not found>
+2015-11-09 21:47:03,829 INFO [org.hibernate.cfg.Environment] - <HHH000021: Bytecode provider name : javassist>
+2015-11-09 21:47:04,089 INFO [org.hibernate.annotations.common.Version] - <HCANN000001: Hibernate Commons Annotations {4.0.4.Final}>
+2015-11-09 21:47:04,141 INFO [org.hibernate.dialect.Dialect] - <HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect>
+2015-11-09 21:47:04,152 INFO [org.hibernate.engine.jdbc.internal.LobCreatorBuilder] - <HHH000422: Disabling contextual LOB creation as connection was null>
+2015-11-09 21:47:04,385 WARN [org.hibernate.mapping.RootClass] - <HHH000038: Composite-id class does not override equals(): com.zhc.sys.entity.SysRoleToSysMenuId>
+2015-11-09 21:47:04,386 WARN [org.hibernate.mapping.RootClass] - <HHH000039: Composite-id class does not override hashCode(): com.zhc.sys.entity.SysRoleToSysMenuId>
+2015-11-09 21:47:04,401 INFO [org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory] - <HHH000397: Using ASTQueryTranslatorFactory>
+2015-11-09 21:47:04,912 INFO [org.hibernate.tool.hbm2ddl.SchemaUpdate] - <HHH000228: Running hbm2ddl schema update>
+2015-11-09 21:47:04,912 INFO [org.hibernate.tool.hbm2ddl.SchemaUpdate] - <HHH000102: Fetching database metadata>
+2015-11-09 21:47:04,920 INFO [org.hibernate.tool.hbm2ddl.SchemaUpdate] - <HHH000396: Updating schema>
+2015-11-09 21:47:04,950 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000261: Table found: qhdask.MailFailLog>
+2015-11-09 21:47:04,950 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000037: Columns: [senddate, content, id, title, execdate, status, exception, receivermails]>
+2015-11-09 21:47:04,950 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000108: Foreign keys: []>
+2015-11-09 21:47:04,951 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000126: Indexes: [primary]>
+2015-11-09 21:47:04,953 INFO [java.sql.DatabaseMetaData] - <HHH000262: Table not found: ask_answer>
+2015-11-09 21:47:04,956 INFO [java.sql.DatabaseMetaData] - <HHH000262: Table not found: ask_classify>
+2015-11-09 21:47:04,958 INFO [java.sql.DatabaseMetaData] - <HHH000262: Table not found: ask_member>
+2015-11-09 21:47:04,959 INFO [java.sql.DatabaseMetaData] - <HHH000262: Table not found: ask_question>
+2015-11-09 21:47:04,983 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000261: Table found: qhdask.qz_job_detail>
+2015-11-09 21:47:04,983 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000037: Columns: [classname, id, extendf1, description, extendf3, extendf2, name, extendf5, extendf4, extendf7, parameters, extendf6, extendf8]>
+2015-11-09 21:47:04,983 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000108: Foreign keys: []>
+2015-11-09 21:47:04,984 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000126: Indexes: [primary]>
+2015-11-09 21:47:04,992 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000261: Table found: qhdask.qz_log>
+2015-11-09 21:47:04,993 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000037: Columns: [id, result, jobname, exectime, exception, otherremark]>
+2015-11-09 21:47:04,993 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000108: Foreign keys: []>
+2015-11-09 21:47:04,993 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000126: Indexes: [primary]>
+2015-11-09 21:47:05,008 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000261: Table found: qhdask.qz_trigger>
+2015-11-09 21:47:05,009 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000037: Columns: [cronexpression, status, qzjobdetail_id, repeatinterval, type, repeatcount, startdelay, id, startdate, extendf1, description, extendf3, name, extendf2, extendf5, extendf4, extendf7, extendf6, extendf9, enddate, extendf8]>
+2015-11-09 21:47:05,009 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000108: Foreign keys: [fk_2gypa1lpf5oij9ksti5ggo1s5]>
+2015-11-09 21:47:05,009 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000126: Indexes: [primary, fk_2gypa1lpf5oij9ksti5ggo1s5]>
+2015-11-09 21:47:05,021 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000261: Table found: qhdask.sysmenu>
+2015-11-09 21:47:05,022 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000037: Columns: [alias, link, createdate, img, parentid, id, extendf1, description, extendf2, name, ename, orderby, updatedate]>
+2015-11-09 21:47:05,022 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000108: Foreign keys: [fk_5p24yuafh3b9skc4qb4bp6ete]>
+2015-11-09 21:47:05,022 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000126: Indexes: [fk_5p24yuafh3b9skc4qb4bp6ete, primary]>
+2015-11-09 21:47:05,031 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000261: Table found: qhdask.syspopedom>
+2015-11-09 21:47:05,031 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000037: Columns: [id, description, sys_code]>
+2015-11-09 21:47:05,031 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000108: Foreign keys: []>
+2015-11-09 21:47:05,031 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000126: Indexes: [primary]>
+2015-11-09 21:47:05,042 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000261: Table found: qhdask.sysrole>
+2015-11-09 21:47:05,043 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000037: Columns: [id, extendf1, popedoms, description, name, extendf2, type]>
+2015-11-09 21:47:05,043 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000108: Foreign keys: []>
+2015-11-09 21:47:05,043 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000126: Indexes: [primary]>
+2015-11-09 21:47:05,058 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000261: Table found: qhdask.sysrole_syspopedom>
+2015-11-09 21:47:05,058 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000037: Columns: [syspopedom_id, sysrole_id]>
+2015-11-09 21:47:05,059 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000108: Foreign keys: [fk_oo7xoflcnvf8skw5omrbql5h9, fk_53kgl5trsotv45d01ox8o04ru]>
+2015-11-09 21:47:05,059 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000126: Indexes: [fk_oo7xoflcnvf8skw5omrbql5h9, primary]>
+2015-11-09 21:47:05,075 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000261: Table found: qhdask.sysroletosysmenu>
+2015-11-09 21:47:05,075 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000037: Columns: [sysmenu_id, extendf1, sysrole_id]>
+2015-11-09 21:47:05,075 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000108: Foreign keys: [fk_m56ufpq4f5xl2jrv8acjjxsk4, fk_bi2ymf7m10j8fe7d1ll4bq47q]>
+2015-11-09 21:47:05,076 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000126: Indexes: [fk_m56ufpq4f5xl2jrv8acjjxsk4, primary]>
+2015-11-09 21:47:05,088 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000261: Table found: qhdask.sysuser>
+2015-11-09 21:47:05,089 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000037: Columns: [id, loginname, phone, lastlogintime, truename, status, email, createdate, password]>
+2015-11-09 21:47:05,089 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000108: Foreign keys: []>
+2015-11-09 21:47:05,089 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000126: Indexes: [primary]>
+2015-11-09 21:47:05,099 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000261: Table found: qhdask.sysusertosysrole>
+2015-11-09 21:47:05,099 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000037: Columns: [id, sysuser_id, sysrole_id]>
+2015-11-09 21:47:05,099 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000108: Foreign keys: [fk_e5l6iwfa48hhxe0mog0ct1j44, fk_lmbccldu4qd824ptp58txfr6o]>
+2015-11-09 21:47:05,100 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000126: Indexes: [primary, fk_e5l6iwfa48hhxe0mog0ct1j44, fk_lmbccldu4qd824ptp58txfr6o]>
+2015-11-09 21:47:05,101 INFO [java.sql.DatabaseMetaData] - <HHH000262: Table not found: ask_answer>
+2015-11-09 21:47:05,101 INFO [java.sql.DatabaseMetaData] - <HHH000262: Table not found: ask_classify>
+2015-11-09 21:47:05,102 INFO [java.sql.DatabaseMetaData] - <HHH000262: Table not found: ask_member>
+2015-11-09 21:47:05,103 INFO [java.sql.DatabaseMetaData] - <HHH000262: Table not found: ask_question>
+2015-11-09 21:47:05,104 INFO [java.sql.DatabaseMetaData] - <HHH000262: Table not found: ask_answer>
+2015-11-09 21:47:05,105 INFO [java.sql.DatabaseMetaData] - <HHH000262: Table not found: ask_classify>
+2015-11-09 21:47:05,106 INFO [java.sql.DatabaseMetaData] - <HHH000262: Table not found: ask_member>
+2015-11-09 21:47:05,107 INFO [java.sql.DatabaseMetaData] - <HHH000262: Table not found: ask_question>
+2015-11-09 21:47:05,169 INFO [org.hibernate.tool.hbm2ddl.SchemaUpdate] - <HHH000232: Schema update complete>
+2015-11-09 21:47:05,633 INFO [org.quartz.impl.StdSchedulerFactory] - <Using default implementation for ThreadExecutor>
+2015-11-09 21:47:05,655 INFO [org.quartz.core.SchedulerSignalerImpl] - <Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl>
+2015-11-09 21:47:05,656 INFO [org.quartz.core.QuartzScheduler] - <Quartz Scheduler v.2.2.1 created.>
+2015-11-09 21:47:05,658 INFO [org.quartz.simpl.RAMJobStore] - <RAMJobStore initialized.>
+2015-11-09 21:47:05,659 INFO [org.quartz.core.QuartzScheduler] - <Scheduler meta-data: Quartz Scheduler (v2.2.1) 'scheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+>
+2015-11-09 21:47:05,659 INFO [org.quartz.impl.StdSchedulerFactory] - <Quartz scheduler 'scheduler' initialized from an externally provided properties instance.>
+2015-11-09 21:47:05,660 INFO [org.quartz.impl.StdSchedulerFactory] - <Quartz scheduler version: 2.2.1>
+2015-11-09 21:47:05,663 INFO [org.quartz.core.QuartzScheduler] - <JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@1b509581>
+2015-11-09 21:47:05,675 INFO [com.zhc.schedule.quartz.ScheduleManager] - <任务调度器开始装载数据库任务信息....>
+2015-11-09 21:47:05,887 INFO [org.springframework.context.support.DefaultLifecycleProcessor] - <Starting beans in phase 2147483647>
+2015-11-09 21:47:05,887 INFO [org.springframework.scheduling.quartz.SchedulerFactoryBean] - <Starting Quartz Scheduler now>
+2015-11-09 21:47:05,887 INFO [org.quartz.core.QuartzScheduler] - <Scheduler scheduler_$_NON_CLUSTERED started.>
+2015-11-09 21:47:05,893 INFO [org.springframework.web.context.ContextLoader] - <Root WebApplicationContext: initialization completed in 4133 ms>
+2015-11-09 21:47:06,215 INFO [com.opensymphony.xwork2.config.providers.XmlConfigurationProvider] - <Parsing configuration file [struts-default.xml]>
+2015-11-09 21:47:06,295 INFO [com.opensymphony.xwork2.config.providers.XmlConfigurationProvider] - <Parsing configuration file [struts-plugin.xml]>
+2015-11-09 21:47:06,318 INFO [com.opensymphony.xwork2.config.providers.XmlConfigurationProvider] - <Parsing configuration file [struts.xml]>
+2015-11-09 21:47:06,338 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (spring) for (com.opensymphony.xwork2.ObjectFactory)>
+2015-11-09 21:47:06,339 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.FileManagerFactory)>
+2015-11-09 21:47:06,339 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.conversion.impl.XWorkConverter)>
+2015-11-09 21:47:06,339 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.conversion.impl.CollectionConverter)>
+2015-11-09 21:47:06,339 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.conversion.impl.ArrayConverter)>
+2015-11-09 21:47:06,340 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.conversion.impl.DateConverter)>
+2015-11-09 21:47:06,340 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.conversion.impl.NumberConverter)>
+2015-11-09 21:47:06,340 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.conversion.impl.StringConverter)>
+2015-11-09 21:47:06,340 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.conversion.ConversionPropertiesProcessor)>
+2015-11-09 21:47:06,341 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.conversion.ConversionFileProcessor)>
+2015-11-09 21:47:06,341 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.conversion.ConversionAnnotationProcessor)>
+2015-11-09 21:47:06,341 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.conversion.TypeConverterCreator)>
+2015-11-09 21:47:06,341 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.conversion.TypeConverterHolder)>
+2015-11-09 21:47:06,341 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.TextProvider)>
+2015-11-09 21:47:06,342 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.LocaleProvider)>
+2015-11-09 21:47:06,342 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.ActionProxyFactory)>
+2015-11-09 21:47:06,342 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.conversion.ObjectTypeDeterminer)>
+2015-11-09 21:47:06,342 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (org.apache.struts2.dispatcher.mapper.ActionMapper)>
+2015-11-09 21:47:06,342 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (jakarta) for (org.apache.struts2.dispatcher.multipart.MultiPartRequest)>
+2015-11-09 21:47:06,342 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (org.apache.struts2.views.freemarker.FreemarkerManager)>
+2015-11-09 21:47:06,344 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (org.apache.struts2.components.UrlRenderer)>
+2015-11-09 21:47:06,345 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.validator.ActionValidatorManager)>
+2015-11-09 21:47:06,345 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.util.ValueStackFactory)>
+2015-11-09 21:47:06,345 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.util.reflection.ReflectionProvider)>
+2015-11-09 21:47:06,345 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.util.reflection.ReflectionContextFactory)>
+2015-11-09 21:47:06,345 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.util.PatternMatcher)>
+2015-11-09 21:47:06,345 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (org.apache.struts2.dispatcher.StaticContentLoader)>
+2015-11-09 21:47:06,346 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.UnknownHandlerManager)>
+2015-11-09 21:47:06,346 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (org.apache.struts2.views.util.UrlHelper)>
+2015-11-09 21:47:06,346 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.util.TextParser)>
+2015-11-09 21:47:06,362 INFO [org.apache.struts2.spring.StrutsSpringObjectFactory] - <Initializing Struts-Spring integration...>
+2015-11-09 21:47:06,362 INFO [com.opensymphony.xwork2.spring.SpringObjectFactory] - <Setting autowire strategy to name>
+2015-11-09 21:47:06,362 INFO [org.apache.struts2.spring.StrutsSpringObjectFactory] - <... initialized Struts-Spring integration successfully>
+2015-11-09 21:47:06,954 INFO [org.springframework.web.servlet.DispatcherServlet] - <FrameworkServlet 'appServlet': initialization started>
+2015-11-09 21:47:06,957 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - <Refreshing WebApplicationContext for namespace 'appServlet-servlet': startup date [Mon Nov 09 21:47:06 CST 2015]; parent: Root WebApplicationContext>
+2015-11-09 21:47:06,957 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/appServlet/servlet-context.xml]>
+2015-11-09 21:47:07,041 INFO [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] - <JSR-330 'javax.inject.Inject' annotation found and supported for autowiring>
+2015-11-09 21:47:07,369 INFO [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping] - <Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'>
+2015-11-09 21:47:07,423 INFO [org.springframework.web.servlet.DispatcherServlet] - <FrameworkServlet 'appServlet': initialization completed in 469 ms>
+2015-11-09 21:48:20,627 WARN [org.hibernate.hql.internal.ast.HqlSqlWalker] - <[DEPRECATION] Encountered positional parameter near line 1, column 60.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.>
+2015-11-09 21:48:20,631 WARN [org.hibernate.hql.internal.ast.HqlSqlWalker] - <[DEPRECATION] Encountered positional parameter near line 1, column 75.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.>
+2015-11-09 21:56:16,633 INFO [org.springframework.web.context.ContextLoader] - <Root WebApplicationContext: initialization started>
+2015-11-09 21:56:16,735 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - <Refreshing Root WebApplicationContext: startup date [Mon Nov 09 21:56:16 CST 2015]; root of context hierarchy>
+2015-11-09 21:56:16,779 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/root-context.xml]>
+2015-11-09 21:56:17,129 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/service.spring.xml]>
+2015-11-09 21:56:17,153 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/mail.spring.xml]>
+2015-11-09 21:56:17,173 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/scheduler.spring.xml]>
+2015-11-09 21:56:17,191 INFO [org.springframework.beans.factory.support.DefaultListableBeanFactory] - <Overriding bean definition for bean 'scheduleService': replacing [Generic bean: class [com.zhc.schedule.quartz.service.ScheduleServiceImpl]; scope=; abstract=false; lazyInit=false; autowireMode=1; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in ServletContext resource [/WEB-INF/spring/service.spring.xml]] with [Generic bean: class [com.zhc.schedule.quartz.service.ScheduleServiceImpl]; scope=; abstract=false; lazyInit=false; autowireMode=1; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in ServletContext resource [/WEB-INF/spring/scheduler.spring.xml]]>
+2015-11-09 21:56:17,335 INFO [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] - <JSR-330 'javax.inject.Inject' annotation found and supported for autowiring>
+2015-11-09 21:56:17,892 INFO [com.alibaba.druid.pool.DruidDataSource] - <{dataSource-1} inited>
+2015-11-09 21:56:17,949 INFO [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] - <Building JPA container EntityManagerFactory for persistence unit 'zhc'>
+2015-11-09 21:56:17,972 INFO [org.hibernate.jpa.internal.util.LogHelper] - <HHH000204: Processing PersistenceUnitInfo [
+	name: zhc
+	...]>
+2015-11-09 21:56:18,056 INFO [org.hibernate.Version] - <HHH000412: Hibernate Core {4.3.5.Final}>
+2015-11-09 21:56:18,058 INFO [org.hibernate.cfg.Environment] - <HHH000206: hibernate.properties not found>
+2015-11-09 21:56:18,060 INFO [org.hibernate.cfg.Environment] - <HHH000021: Bytecode provider name : javassist>
+2015-11-09 21:56:18,316 INFO [org.hibernate.annotations.common.Version] - <HCANN000001: Hibernate Commons Annotations {4.0.4.Final}>
+2015-11-09 21:56:18,369 INFO [org.hibernate.dialect.Dialect] - <HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect>
+2015-11-09 21:56:18,380 INFO [org.hibernate.engine.jdbc.internal.LobCreatorBuilder] - <HHH000422: Disabling contextual LOB creation as connection was null>
+2015-11-09 21:56:18,600 WARN [org.hibernate.mapping.RootClass] - <HHH000038: Composite-id class does not override equals(): com.zhc.sys.entity.SysRoleToSysMenuId>
+2015-11-09 21:56:18,600 WARN [org.hibernate.mapping.RootClass] - <HHH000039: Composite-id class does not override hashCode(): com.zhc.sys.entity.SysRoleToSysMenuId>
+2015-11-09 21:56:18,614 INFO [org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory] - <HHH000397: Using ASTQueryTranslatorFactory>
+2015-11-09 21:56:19,098 INFO [org.hibernate.tool.hbm2ddl.SchemaUpdate] - <HHH000228: Running hbm2ddl schema update>
+2015-11-09 21:56:19,098 INFO [org.hibernate.tool.hbm2ddl.SchemaUpdate] - <HHH000102: Fetching database metadata>
+2015-11-09 21:56:19,106 INFO [org.hibernate.tool.hbm2ddl.SchemaUpdate] - <HHH000396: Updating schema>
+2015-11-09 21:56:19,132 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000261: Table found: qhdask.MailFailLog>
+2015-11-09 21:56:19,132 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000037: Columns: [senddate, content, id, title, execdate, status, exception, receivermails]>
+2015-11-09 21:56:19,133 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000108: Foreign keys: []>
+2015-11-09 21:56:19,133 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000126: Indexes: [primary]>
+2015-11-09 21:56:19,146 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000261: Table found: qhdask.ask_answer>
+2015-11-09 21:56:19,146 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000037: Columns: [member, id, status, answercontent]>
+2015-11-09 21:56:19,147 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000108: Foreign keys: []>
+2015-11-09 21:56:19,147 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000126: Indexes: [primary]>
+2015-11-09 21:56:19,163 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000261: Table found: qhdask.ask_classify>
+2015-11-09 21:56:19,164 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000037: Columns: [alias, link, createdate, img, parentid, id, extendf1, description, extendf2, name, ename, orderby, updatedate]>
+2015-11-09 21:56:19,164 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000108: Foreign keys: [fk_6noujkvl3n81tfnnfemv8nxjv]>
+2015-11-09 21:56:19,164 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000126: Indexes: [fk_6noujkvl3n81tfnnfemv8nxjv, primary]>
+2015-11-09 21:56:19,179 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000261: Table found: qhdask.ask_member>
+2015-11-09 21:56:19,179 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000037: Columns: [expertisearea, wechart, curryears, sex, truename, status, education, professional, photo, password, personprofile, id, jobtitle, loginname, currprofessional, school, address, email, servicefall, company, birthdate, role, telephone, qq]>
+2015-11-09 21:56:19,179 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000108: Foreign keys: []>
+2015-11-09 21:56:19,179 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000126: Indexes: [primary]>
+2015-11-09 21:56:19,188 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000261: Table found: qhdask.ask_question>
+2015-11-09 21:56:19,189 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000037: Columns: [member, id, classify, asktag, title, status, description]>
+2015-11-09 21:56:19,189 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000108: Foreign keys: []>
+2015-11-09 21:56:19,189 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000126: Indexes: [primary]>
+2015-11-09 21:56:19,200 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000261: Table found: qhdask.qz_job_detail>
+2015-11-09 21:56:19,201 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000037: Columns: [classname, id, extendf1, description, extendf3, extendf2, name, extendf5, extendf4, extendf7, parameters, extendf6, extendf8]>
+2015-11-09 21:56:19,201 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000108: Foreign keys: []>
+2015-11-09 21:56:19,201 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000126: Indexes: [primary]>
+2015-11-09 21:56:19,211 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000261: Table found: qhdask.qz_log>
+2015-11-09 21:56:19,212 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000037: Columns: [id, result, jobname, exectime, exception, otherremark]>
+2015-11-09 21:56:19,212 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000108: Foreign keys: []>
+2015-11-09 21:56:19,212 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000126: Indexes: [primary]>
+2015-11-09 21:56:19,229 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000261: Table found: qhdask.qz_trigger>
+2015-11-09 21:56:19,229 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000037: Columns: [cronexpression, status, qzjobdetail_id, repeatinterval, type, repeatcount, startdelay, id, startdate, extendf1, description, extendf3, name, extendf2, extendf5, extendf4, extendf7, extendf6, extendf9, enddate, extendf8]>
+2015-11-09 21:56:19,229 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000108: Foreign keys: [fk_2gypa1lpf5oij9ksti5ggo1s5]>
+2015-11-09 21:56:19,230 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000126: Indexes: [primary, fk_2gypa1lpf5oij9ksti5ggo1s5]>
+2015-11-09 21:56:19,247 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000261: Table found: qhdask.sysmenu>
+2015-11-09 21:56:19,247 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000037: Columns: [alias, link, createdate, img, parentid, id, extendf1, description, extendf2, name, ename, orderby, updatedate]>
+2015-11-09 21:56:19,247 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000108: Foreign keys: [fk_5p24yuafh3b9skc4qb4bp6ete]>
+2015-11-09 21:56:19,248 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000126: Indexes: [fk_5p24yuafh3b9skc4qb4bp6ete, primary]>
+2015-11-09 21:56:19,259 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000261: Table found: qhdask.syspopedom>
+2015-11-09 21:56:19,259 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000037: Columns: [id, description, sys_code]>
+2015-11-09 21:56:19,260 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000108: Foreign keys: []>
+2015-11-09 21:56:19,260 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000126: Indexes: [primary]>
+2015-11-09 21:56:19,269 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000261: Table found: qhdask.sysrole>
+2015-11-09 21:56:19,269 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000037: Columns: [id, extendf1, popedoms, description, name, extendf2, type]>
+2015-11-09 21:56:19,270 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000108: Foreign keys: []>
+2015-11-09 21:56:19,270 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000126: Indexes: [primary]>
+2015-11-09 21:56:19,279 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000261: Table found: qhdask.sysrole_syspopedom>
+2015-11-09 21:56:19,279 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000037: Columns: [syspopedom_id, sysrole_id]>
+2015-11-09 21:56:19,280 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000108: Foreign keys: [fk_oo7xoflcnvf8skw5omrbql5h9, fk_53kgl5trsotv45d01ox8o04ru]>
+2015-11-09 21:56:19,280 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000126: Indexes: [fk_oo7xoflcnvf8skw5omrbql5h9, primary]>
+2015-11-09 21:56:19,289 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000261: Table found: qhdask.sysroletosysmenu>
+2015-11-09 21:56:19,290 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000037: Columns: [sysmenu_id, extendf1, sysrole_id]>
+2015-11-09 21:56:19,290 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000108: Foreign keys: [fk_m56ufpq4f5xl2jrv8acjjxsk4, fk_bi2ymf7m10j8fe7d1ll4bq47q]>
+2015-11-09 21:56:19,290 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000126: Indexes: [fk_m56ufpq4f5xl2jrv8acjjxsk4, primary]>
+2015-11-09 21:56:19,300 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000261: Table found: qhdask.sysuser>
+2015-11-09 21:56:19,300 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000037: Columns: [id, loginname, phone, lastlogintime, truename, status, email, createdate, password]>
+2015-11-09 21:56:19,300 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000108: Foreign keys: []>
+2015-11-09 21:56:19,300 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000126: Indexes: [primary]>
+2015-11-09 21:56:19,310 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000261: Table found: qhdask.sysusertosysrole>
+2015-11-09 21:56:19,311 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000037: Columns: [id, sysuser_id, sysrole_id]>
+2015-11-09 21:56:19,311 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000108: Foreign keys: [fk_e5l6iwfa48hhxe0mog0ct1j44, fk_lmbccldu4qd824ptp58txfr6o]>
+2015-11-09 21:56:19,311 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000126: Indexes: [primary, fk_e5l6iwfa48hhxe0mog0ct1j44, fk_lmbccldu4qd824ptp58txfr6o]>
+2015-11-09 21:56:19,313 INFO [org.hibernate.tool.hbm2ddl.SchemaUpdate] - <HHH000232: Schema update complete>
+2015-11-09 21:56:19,799 INFO [org.quartz.impl.StdSchedulerFactory] - <Using default implementation for ThreadExecutor>
+2015-11-09 21:56:19,821 INFO [org.quartz.core.SchedulerSignalerImpl] - <Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl>
+2015-11-09 21:56:19,822 INFO [org.quartz.core.QuartzScheduler] - <Quartz Scheduler v.2.2.1 created.>
+2015-11-09 21:56:19,824 INFO [org.quartz.simpl.RAMJobStore] - <RAMJobStore initialized.>
+2015-11-09 21:56:19,825 INFO [org.quartz.core.QuartzScheduler] - <Scheduler meta-data: Quartz Scheduler (v2.2.1) 'scheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+>
+2015-11-09 21:56:19,825 INFO [org.quartz.impl.StdSchedulerFactory] - <Quartz scheduler 'scheduler' initialized from an externally provided properties instance.>
+2015-11-09 21:56:19,826 INFO [org.quartz.impl.StdSchedulerFactory] - <Quartz scheduler version: 2.2.1>
+2015-11-09 21:56:19,828 INFO [org.quartz.core.QuartzScheduler] - <JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@6d7ff1d0>
+2015-11-09 21:56:19,841 INFO [com.zhc.schedule.quartz.ScheduleManager] - <任务调度器开始装载数据库任务信息....>
+2015-11-09 21:56:20,075 INFO [org.springframework.context.support.DefaultLifecycleProcessor] - <Starting beans in phase 2147483647>
+2015-11-09 21:56:20,075 INFO [org.springframework.scheduling.quartz.SchedulerFactoryBean] - <Starting Quartz Scheduler now>
+2015-11-09 21:56:20,075 INFO [org.quartz.core.QuartzScheduler] - <Scheduler scheduler_$_NON_CLUSTERED started.>
+2015-11-09 21:56:20,078 INFO [org.springframework.web.context.ContextLoader] - <Root WebApplicationContext: initialization completed in 3442 ms>
+2015-11-09 21:56:20,287 INFO [com.opensymphony.xwork2.config.providers.XmlConfigurationProvider] - <Parsing configuration file [struts-default.xml]>
+2015-11-09 21:56:20,368 INFO [com.opensymphony.xwork2.config.providers.XmlConfigurationProvider] - <Parsing configuration file [struts-plugin.xml]>
+2015-11-09 21:56:20,394 INFO [com.opensymphony.xwork2.config.providers.XmlConfigurationProvider] - <Parsing configuration file [struts.xml]>
+2015-11-09 21:56:20,397 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (spring) for (com.opensymphony.xwork2.ObjectFactory)>
+2015-11-09 21:56:20,397 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.FileManagerFactory)>
+2015-11-09 21:56:20,398 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.conversion.impl.XWorkConverter)>
+2015-11-09 21:56:20,398 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.conversion.impl.CollectionConverter)>
+2015-11-09 21:56:20,398 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.conversion.impl.ArrayConverter)>
+2015-11-09 21:56:20,398 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.conversion.impl.DateConverter)>
+2015-11-09 21:56:20,398 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.conversion.impl.NumberConverter)>
+2015-11-09 21:56:20,398 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.conversion.impl.StringConverter)>
+2015-11-09 21:56:20,398 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.conversion.ConversionPropertiesProcessor)>
+2015-11-09 21:56:20,398 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.conversion.ConversionFileProcessor)>
+2015-11-09 21:56:20,399 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.conversion.ConversionAnnotationProcessor)>
+2015-11-09 21:56:20,399 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.conversion.TypeConverterCreator)>
+2015-11-09 21:56:20,399 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.conversion.TypeConverterHolder)>
+2015-11-09 21:56:20,399 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.TextProvider)>
+2015-11-09 21:56:20,399 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.LocaleProvider)>
+2015-11-09 21:56:20,399 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.ActionProxyFactory)>
+2015-11-09 21:56:20,399 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.conversion.ObjectTypeDeterminer)>
+2015-11-09 21:56:20,399 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (org.apache.struts2.dispatcher.mapper.ActionMapper)>
+2015-11-09 21:56:20,400 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (jakarta) for (org.apache.struts2.dispatcher.multipart.MultiPartRequest)>
+2015-11-09 21:56:20,400 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (org.apache.struts2.views.freemarker.FreemarkerManager)>
+2015-11-09 21:56:20,401 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (org.apache.struts2.components.UrlRenderer)>
+2015-11-09 21:56:20,401 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.validator.ActionValidatorManager)>
+2015-11-09 21:56:20,401 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.util.ValueStackFactory)>
+2015-11-09 21:56:20,401 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.util.reflection.ReflectionProvider)>
+2015-11-09 21:56:20,402 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.util.reflection.ReflectionContextFactory)>
+2015-11-09 21:56:20,402 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.util.PatternMatcher)>
+2015-11-09 21:56:20,402 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (org.apache.struts2.dispatcher.StaticContentLoader)>
+2015-11-09 21:56:20,402 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.UnknownHandlerManager)>
+2015-11-09 21:56:20,402 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (org.apache.struts2.views.util.UrlHelper)>
+2015-11-09 21:56:20,402 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.util.TextParser)>
+2015-11-09 21:56:20,418 INFO [org.apache.struts2.spring.StrutsSpringObjectFactory] - <Initializing Struts-Spring integration...>
+2015-11-09 21:56:20,419 INFO [com.opensymphony.xwork2.spring.SpringObjectFactory] - <Setting autowire strategy to name>
+2015-11-09 21:56:20,419 INFO [org.apache.struts2.spring.StrutsSpringObjectFactory] - <... initialized Struts-Spring integration successfully>
+2015-11-09 21:56:21,008 INFO [org.springframework.web.servlet.DispatcherServlet] - <FrameworkServlet 'appServlet': initialization started>
+2015-11-09 21:56:21,013 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - <Refreshing WebApplicationContext for namespace 'appServlet-servlet': startup date [Mon Nov 09 21:56:21 CST 2015]; parent: Root WebApplicationContext>
+2015-11-09 21:56:21,014 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/appServlet/servlet-context.xml]>
+2015-11-09 21:56:21,103 INFO [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] - <JSR-330 'javax.inject.Inject' annotation found and supported for autowiring>
+2015-11-09 21:56:21,401 INFO [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping] - <Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'>
+2015-11-09 21:56:21,434 INFO [org.springframework.web.servlet.DispatcherServlet] - <FrameworkServlet 'appServlet': initialization completed in 426 ms>
+2015-11-09 21:56:26,514 WARN [org.hibernate.hql.internal.ast.HqlSqlWalker] - <[DEPRECATION] Encountered positional parameter near line 1, column 60.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.>
+2015-11-09 21:56:26,517 WARN [org.hibernate.hql.internal.ast.HqlSqlWalker] - <[DEPRECATION] Encountered positional parameter near line 1, column 75.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.>
+2015-11-09 22:09:25,978 INFO [org.springframework.web.context.ContextLoader] - <Root WebApplicationContext: initialization started>
+2015-11-09 22:09:26,078 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - <Refreshing Root WebApplicationContext: startup date [Mon Nov 09 22:09:26 CST 2015]; root of context hierarchy>
+2015-11-09 22:09:26,119 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/root-context.xml]>
+2015-11-09 22:09:26,452 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/service.spring.xml]>
+2015-11-09 22:09:26,476 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/mail.spring.xml]>
+2015-11-09 22:09:26,496 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/scheduler.spring.xml]>
+2015-11-09 22:09:26,517 INFO [org.springframework.beans.factory.support.DefaultListableBeanFactory] - <Overriding bean definition for bean 'scheduleService': replacing [Generic bean: class [com.zhc.schedule.quartz.service.ScheduleServiceImpl]; scope=; abstract=false; lazyInit=false; autowireMode=1; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in ServletContext resource [/WEB-INF/spring/service.spring.xml]] with [Generic bean: class [com.zhc.schedule.quartz.service.ScheduleServiceImpl]; scope=; abstract=false; lazyInit=false; autowireMode=1; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in ServletContext resource [/WEB-INF/spring/scheduler.spring.xml]]>
+2015-11-09 22:09:26,650 INFO [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] - <JSR-330 'javax.inject.Inject' annotation found and supported for autowiring>
+2015-11-09 22:09:27,189 INFO [com.alibaba.druid.pool.DruidDataSource] - <{dataSource-1} inited>
+2015-11-09 22:09:27,246 INFO [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] - <Building JPA container EntityManagerFactory for persistence unit 'zhc'>
+2015-11-09 22:09:27,273 INFO [org.hibernate.jpa.internal.util.LogHelper] - <HHH000204: Processing PersistenceUnitInfo [
+	name: zhc
+	...]>
+2015-11-09 22:09:27,358 INFO [org.hibernate.Version] - <HHH000412: Hibernate Core {4.3.5.Final}>
+2015-11-09 22:09:27,360 INFO [org.hibernate.cfg.Environment] - <HHH000206: hibernate.properties not found>
+2015-11-09 22:09:27,362 INFO [org.hibernate.cfg.Environment] - <HHH000021: Bytecode provider name : javassist>
+2015-11-09 22:09:27,610 INFO [org.hibernate.annotations.common.Version] - <HCANN000001: Hibernate Commons Annotations {4.0.4.Final}>
+2015-11-09 22:09:27,659 INFO [org.hibernate.dialect.Dialect] - <HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect>
+2015-11-09 22:09:27,670 INFO [org.hibernate.engine.jdbc.internal.LobCreatorBuilder] - <HHH000422: Disabling contextual LOB creation as connection was null>
+2015-11-09 22:09:27,879 WARN [org.hibernate.mapping.RootClass] - <HHH000038: Composite-id class does not override equals(): com.zhc.sys.entity.SysRoleToSysMenuId>
+2015-11-09 22:09:27,880 WARN [org.hibernate.mapping.RootClass] - <HHH000039: Composite-id class does not override hashCode(): com.zhc.sys.entity.SysRoleToSysMenuId>
+2015-11-09 22:09:27,894 INFO [org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory] - <HHH000397: Using ASTQueryTranslatorFactory>
+2015-11-09 22:09:28,356 INFO [org.hibernate.tool.hbm2ddl.SchemaUpdate] - <HHH000228: Running hbm2ddl schema update>
+2015-11-09 22:09:28,357 INFO [org.hibernate.tool.hbm2ddl.SchemaUpdate] - <HHH000102: Fetching database metadata>
+2015-11-09 22:09:28,366 INFO [org.hibernate.tool.hbm2ddl.SchemaUpdate] - <HHH000396: Updating schema>
+2015-11-09 22:09:28,393 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000261: Table found: qhdask.MailFailLog>
+2015-11-09 22:09:28,394 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000037: Columns: [senddate, content, id, title, execdate, status, exception, receivermails]>
+2015-11-09 22:09:28,394 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000108: Foreign keys: []>
+2015-11-09 22:09:28,394 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000126: Indexes: [primary]>
+2015-11-09 22:09:28,410 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000261: Table found: qhdask.ask_answer>
+2015-11-09 22:09:28,410 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000037: Columns: [member, id, status, answercontent]>
+2015-11-09 22:09:28,411 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000108: Foreign keys: []>
+2015-11-09 22:09:28,411 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000126: Indexes: [primary]>
+2015-11-09 22:09:28,428 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000261: Table found: qhdask.ask_classify>
+2015-11-09 22:09:28,428 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000037: Columns: [alias, link, createdate, img, parentid, id, extendf1, description, extendf2, name, ename, orderby, updatedate]>
+2015-11-09 22:09:28,429 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000108: Foreign keys: [fk_6noujkvl3n81tfnnfemv8nxjv]>
+2015-11-09 22:09:28,429 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000126: Indexes: [fk_6noujkvl3n81tfnnfemv8nxjv, primary]>
+2015-11-09 22:09:28,443 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000261: Table found: qhdask.ask_member>
+2015-11-09 22:09:28,443 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000037: Columns: [expertisearea, wechart, curryears, sex, truename, status, education, professional, photo, password, personprofile, id, jobtitle, loginname, currprofessional, school, address, email, servicefall, company, birthdate, role, telephone, qq]>
+2015-11-09 22:09:28,444 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000108: Foreign keys: []>
+2015-11-09 22:09:28,444 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000126: Indexes: [primary]>
+2015-11-09 22:09:28,453 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000261: Table found: qhdask.ask_question>
+2015-11-09 22:09:28,453 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000037: Columns: [member, id, classify, asktag, title, status, description]>
+2015-11-09 22:09:28,453 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000108: Foreign keys: []>
+2015-11-09 22:09:28,454 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000126: Indexes: [primary]>
+2015-11-09 22:09:28,465 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000261: Table found: qhdask.qz_job_detail>
+2015-11-09 22:09:28,466 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000037: Columns: [classname, id, extendf1, description, extendf3, extendf2, name, extendf5, extendf4, extendf7, parameters, extendf6, extendf8]>
+2015-11-09 22:09:28,466 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000108: Foreign keys: []>
+2015-11-09 22:09:28,466 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000126: Indexes: [primary]>
+2015-11-09 22:09:28,476 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000261: Table found: qhdask.qz_log>
+2015-11-09 22:09:28,476 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000037: Columns: [id, result, jobname, exectime, exception, otherremark]>
+2015-11-09 22:09:28,477 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000108: Foreign keys: []>
+2015-11-09 22:09:28,477 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000126: Indexes: [primary]>
+2015-11-09 22:09:28,493 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000261: Table found: qhdask.qz_trigger>
+2015-11-09 22:09:28,493 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000037: Columns: [cronexpression, status, qzjobdetail_id, repeatinterval, type, repeatcount, startdelay, id, startdate, extendf1, description, extendf3, name, extendf2, extendf5, extendf4, extendf7, extendf6, extendf9, enddate, extendf8]>
+2015-11-09 22:09:28,494 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000108: Foreign keys: [fk_2gypa1lpf5oij9ksti5ggo1s5]>
+2015-11-09 22:09:28,494 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000126: Indexes: [primary, fk_2gypa1lpf5oij9ksti5ggo1s5]>
+2015-11-09 22:09:28,509 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000261: Table found: qhdask.sysmenu>
+2015-11-09 22:09:28,510 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000037: Columns: [alias, link, createdate, img, parentid, id, extendf1, description, extendf2, name, ename, orderby, updatedate]>
+2015-11-09 22:09:28,510 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000108: Foreign keys: [fk_5p24yuafh3b9skc4qb4bp6ete]>
+2015-11-09 22:09:28,510 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000126: Indexes: [fk_5p24yuafh3b9skc4qb4bp6ete, primary]>
+2015-11-09 22:09:28,522 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000261: Table found: qhdask.syspopedom>
+2015-11-09 22:09:28,522 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000037: Columns: [id, description, sys_code]>
+2015-11-09 22:09:28,522 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000108: Foreign keys: []>
+2015-11-09 22:09:28,522 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000126: Indexes: [primary]>
+2015-11-09 22:09:28,532 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000261: Table found: qhdask.sysrole>
+2015-11-09 22:09:28,532 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000037: Columns: [id, extendf1, popedoms, description, name, extendf2, type]>
+2015-11-09 22:09:28,533 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000108: Foreign keys: []>
+2015-11-09 22:09:28,533 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000126: Indexes: [primary]>
+2015-11-09 22:09:28,544 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000261: Table found: qhdask.sysrole_syspopedom>
+2015-11-09 22:09:28,544 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000037: Columns: [syspopedom_id, sysrole_id]>
+2015-11-09 22:09:28,544 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000108: Foreign keys: [fk_oo7xoflcnvf8skw5omrbql5h9, fk_53kgl5trsotv45d01ox8o04ru]>
+2015-11-09 22:09:28,545 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000126: Indexes: [fk_oo7xoflcnvf8skw5omrbql5h9, primary]>
+2015-11-09 22:09:28,553 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000261: Table found: qhdask.sysroletosysmenu>
+2015-11-09 22:09:28,554 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000037: Columns: [sysmenu_id, extendf1, sysrole_id]>
+2015-11-09 22:09:28,554 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000108: Foreign keys: [fk_m56ufpq4f5xl2jrv8acjjxsk4, fk_bi2ymf7m10j8fe7d1ll4bq47q]>
+2015-11-09 22:09:28,554 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000126: Indexes: [fk_m56ufpq4f5xl2jrv8acjjxsk4, primary]>
+2015-11-09 22:09:28,564 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000261: Table found: qhdask.sysuser>
+2015-11-09 22:09:28,564 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000037: Columns: [id, loginname, phone, lastlogintime, truename, status, email, createdate, password]>
+2015-11-09 22:09:28,564 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000108: Foreign keys: []>
+2015-11-09 22:09:28,565 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000126: Indexes: [primary]>
+2015-11-09 22:09:28,573 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000261: Table found: qhdask.sysusertosysrole>
+2015-11-09 22:09:28,573 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000037: Columns: [id, sysuser_id, sysrole_id]>
+2015-11-09 22:09:28,574 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000108: Foreign keys: [fk_e5l6iwfa48hhxe0mog0ct1j44, fk_lmbccldu4qd824ptp58txfr6o]>
+2015-11-09 22:09:28,574 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000126: Indexes: [primary, fk_e5l6iwfa48hhxe0mog0ct1j44, fk_lmbccldu4qd824ptp58txfr6o]>
+2015-11-09 22:09:28,575 INFO [org.hibernate.tool.hbm2ddl.SchemaUpdate] - <HHH000232: Schema update complete>
+2015-11-09 22:09:29,032 INFO [org.quartz.impl.StdSchedulerFactory] - <Using default implementation for ThreadExecutor>
+2015-11-09 22:09:29,055 INFO [org.quartz.core.SchedulerSignalerImpl] - <Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl>
+2015-11-09 22:09:29,056 INFO [org.quartz.core.QuartzScheduler] - <Quartz Scheduler v.2.2.1 created.>
+2015-11-09 22:09:29,058 INFO [org.quartz.simpl.RAMJobStore] - <RAMJobStore initialized.>
+2015-11-09 22:09:29,059 INFO [org.quartz.core.QuartzScheduler] - <Scheduler meta-data: Quartz Scheduler (v2.2.1) 'scheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+>
+2015-11-09 22:09:29,059 INFO [org.quartz.impl.StdSchedulerFactory] - <Quartz scheduler 'scheduler' initialized from an externally provided properties instance.>
+2015-11-09 22:09:29,060 INFO [org.quartz.impl.StdSchedulerFactory] - <Quartz scheduler version: 2.2.1>
+2015-11-09 22:09:29,062 INFO [org.quartz.core.QuartzScheduler] - <JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@eb508f3>
+2015-11-09 22:09:29,072 INFO [com.zhc.schedule.quartz.ScheduleManager] - <任务调度器开始装载数据库任务信息....>
+2015-11-09 22:09:29,299 INFO [org.springframework.context.support.DefaultLifecycleProcessor] - <Starting beans in phase 2147483647>
+2015-11-09 22:09:29,300 INFO [org.springframework.scheduling.quartz.SchedulerFactoryBean] - <Starting Quartz Scheduler now>
+2015-11-09 22:09:29,300 INFO [org.quartz.core.QuartzScheduler] - <Scheduler scheduler_$_NON_CLUSTERED started.>
+2015-11-09 22:09:29,304 INFO [org.springframework.web.context.ContextLoader] - <Root WebApplicationContext: initialization completed in 3324 ms>
+2015-11-09 22:09:29,508 INFO [com.opensymphony.xwork2.config.providers.XmlConfigurationProvider] - <Parsing configuration file [struts-default.xml]>
+2015-11-09 22:09:29,586 INFO [com.opensymphony.xwork2.config.providers.XmlConfigurationProvider] - <Parsing configuration file [struts-plugin.xml]>
+2015-11-09 22:09:29,611 INFO [com.opensymphony.xwork2.config.providers.XmlConfigurationProvider] - <Parsing configuration file [struts.xml]>
+2015-11-09 22:09:29,614 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (spring) for (com.opensymphony.xwork2.ObjectFactory)>
+2015-11-09 22:09:29,614 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.FileManagerFactory)>
+2015-11-09 22:09:29,615 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.conversion.impl.XWorkConverter)>
+2015-11-09 22:09:29,615 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.conversion.impl.CollectionConverter)>
+2015-11-09 22:09:29,615 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.conversion.impl.ArrayConverter)>
+2015-11-09 22:09:29,615 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.conversion.impl.DateConverter)>
+2015-11-09 22:09:29,615 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.conversion.impl.NumberConverter)>
+2015-11-09 22:09:29,615 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.conversion.impl.StringConverter)>
+2015-11-09 22:09:29,615 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.conversion.ConversionPropertiesProcessor)>
+2015-11-09 22:09:29,615 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.conversion.ConversionFileProcessor)>
+2015-11-09 22:09:29,616 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.conversion.ConversionAnnotationProcessor)>
+2015-11-09 22:09:29,616 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.conversion.TypeConverterCreator)>
+2015-11-09 22:09:29,616 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.conversion.TypeConverterHolder)>
+2015-11-09 22:09:29,616 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.TextProvider)>
+2015-11-09 22:09:29,616 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.LocaleProvider)>
+2015-11-09 22:09:29,616 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.ActionProxyFactory)>
+2015-11-09 22:09:29,616 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.conversion.ObjectTypeDeterminer)>
+2015-11-09 22:09:29,616 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (org.apache.struts2.dispatcher.mapper.ActionMapper)>
+2015-11-09 22:09:29,616 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (jakarta) for (org.apache.struts2.dispatcher.multipart.MultiPartRequest)>
+2015-11-09 22:09:29,617 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (org.apache.struts2.views.freemarker.FreemarkerManager)>
+2015-11-09 22:09:29,618 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (org.apache.struts2.components.UrlRenderer)>
+2015-11-09 22:09:29,618 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.validator.ActionValidatorManager)>
+2015-11-09 22:09:29,618 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.util.ValueStackFactory)>
+2015-11-09 22:09:29,619 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.util.reflection.ReflectionProvider)>
+2015-11-09 22:09:29,619 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.util.reflection.ReflectionContextFactory)>
+2015-11-09 22:09:29,619 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.util.PatternMatcher)>
+2015-11-09 22:09:29,619 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (org.apache.struts2.dispatcher.StaticContentLoader)>
+2015-11-09 22:09:29,619 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.UnknownHandlerManager)>
+2015-11-09 22:09:29,619 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (org.apache.struts2.views.util.UrlHelper)>
+2015-11-09 22:09:29,619 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.util.TextParser)>
+2015-11-09 22:09:29,634 INFO [org.apache.struts2.spring.StrutsSpringObjectFactory] - <Initializing Struts-Spring integration...>
+2015-11-09 22:09:29,635 INFO [com.opensymphony.xwork2.spring.SpringObjectFactory] - <Setting autowire strategy to name>
+2015-11-09 22:09:29,635 INFO [org.apache.struts2.spring.StrutsSpringObjectFactory] - <... initialized Struts-Spring integration successfully>
+2015-11-09 22:09:30,148 ERROR [org.apache.struts2.dispatcher.Dispatcher] - <Dispatcher initialization failed>
+Unable to load configuration. - [unknown location]
+	at com.opensymphony.xwork2.config.ConfigurationManager.getConfiguration(ConfigurationManager.java:70)
+	at org.apache.struts2.dispatcher.Dispatcher.init_PreloadConfiguration(Dispatcher.java:446)
+	at org.apache.struts2.dispatcher.Dispatcher.init(Dispatcher.java:490)
+	at org.apache.struts2.dispatcher.ng.InitOperations.initDispatcher(InitOperations.java:74)
+	at org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter.init(StrutsPrepareAndExecuteFilter.java:57)
+	at org.mortbay.jetty.servlet.FilterHolder.doStart(FilterHolder.java:97)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.servlet.ServletHandler.initialize(ServletHandler.java:713)
+	at org.mortbay.jetty.servlet.Context.startContext(Context.java:140)
+	at org.mortbay.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1282)
+	at org.mortbay.jetty.handler.ContextHandler.doStart(ContextHandler.java:518)
+	at org.mortbay.jetty.webapp.WebAppContext.doStart(WebAppContext.java:499)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.handler.HandlerWrapper.doStart(HandlerWrapper.java:130)
+	at org.mortbay.jetty.Server.doStart(Server.java:224)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at runjettyrun.Bootstrap.main(Bootstrap.java:97)
+Caused by: The Result type [json] which is defined in the Result annotation on the class [class com.zhc.ask.action.AskClassifyAction] or determined by the file extension or is the default result type for the PackageConfig of the action, could not be found as a result-type defined for the Struts/XWork package [com.zhc.ask.action#convention-default#/manage/ask] - [unknown location]
+	at org.apache.struts2.convention.DefaultResultMapBuilder.createResultConfig(DefaultResultMapBuilder.java:438)
+	at org.apache.struts2.convention.DefaultResultMapBuilder.createFromAnnotations(DefaultResultMapBuilder.java:410)
+	at org.apache.struts2.convention.DefaultResultMapBuilder.build(DefaultResultMapBuilder.java:202)
+	at org.apache.struts2.convention.PackageBasedActionConfigBuilder.createActionConfig(PackageBasedActionConfigBuilder.java:935)
+	at org.apache.struts2.convention.PackageBasedActionConfigBuilder.buildConfiguration(PackageBasedActionConfigBuilder.java:718)
+	at org.apache.struts2.convention.PackageBasedActionConfigBuilder.buildActionConfigs(PackageBasedActionConfigBuilder.java:348)
+	at org.apache.struts2.convention.ClasspathPackageProvider.loadPackages(ClasspathPackageProvider.java:53)
+	at com.opensymphony.xwork2.config.impl.DefaultConfiguration.reloadContainer(DefaultConfiguration.java:260)
+	at com.opensymphony.xwork2.config.ConfigurationManager.getConfiguration(ConfigurationManager.java:67)
+	... 16 more
+2015-11-09 22:11:19,647 INFO [org.springframework.web.context.ContextLoader] - <Root WebApplicationContext: initialization started>
+2015-11-09 22:11:19,752 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - <Refreshing Root WebApplicationContext: startup date [Mon Nov 09 22:11:19 CST 2015]; root of context hierarchy>
+2015-11-09 22:11:19,794 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/root-context.xml]>
+2015-11-09 22:11:20,156 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/service.spring.xml]>
+2015-11-09 22:11:20,178 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/mail.spring.xml]>
+2015-11-09 22:11:20,198 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/scheduler.spring.xml]>
+2015-11-09 22:11:20,224 INFO [org.springframework.beans.factory.support.DefaultListableBeanFactory] - <Overriding bean definition for bean 'scheduleService': replacing [Generic bean: class [com.zhc.schedule.quartz.service.ScheduleServiceImpl]; scope=; abstract=false; lazyInit=false; autowireMode=1; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in ServletContext resource [/WEB-INF/spring/service.spring.xml]] with [Generic bean: class [com.zhc.schedule.quartz.service.ScheduleServiceImpl]; scope=; abstract=false; lazyInit=false; autowireMode=1; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in ServletContext resource [/WEB-INF/spring/scheduler.spring.xml]]>
+2015-11-09 22:11:20,386 INFO [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] - <JSR-330 'javax.inject.Inject' annotation found and supported for autowiring>
+2015-11-09 22:11:20,938 INFO [com.alibaba.druid.pool.DruidDataSource] - <{dataSource-1} inited>
+2015-11-09 22:11:21,001 INFO [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] - <Building JPA container EntityManagerFactory for persistence unit 'zhc'>
+2015-11-09 22:11:21,027 INFO [org.hibernate.jpa.internal.util.LogHelper] - <HHH000204: Processing PersistenceUnitInfo [
+	name: zhc
+	...]>
+2015-11-09 22:11:21,119 INFO [org.hibernate.Version] - <HHH000412: Hibernate Core {4.3.5.Final}>
+2015-11-09 22:11:21,122 INFO [org.hibernate.cfg.Environment] - <HHH000206: hibernate.properties not found>
+2015-11-09 22:11:21,124 INFO [org.hibernate.cfg.Environment] - <HHH000021: Bytecode provider name : javassist>
+2015-11-09 22:11:21,393 INFO [org.hibernate.annotations.common.Version] - <HCANN000001: Hibernate Commons Annotations {4.0.4.Final}>
+2015-11-09 22:11:21,443 INFO [org.hibernate.dialect.Dialect] - <HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect>
+2015-11-09 22:11:21,454 INFO [org.hibernate.engine.jdbc.internal.LobCreatorBuilder] - <HHH000422: Disabling contextual LOB creation as connection was null>
+2015-11-09 22:11:21,659 WARN [org.hibernate.mapping.RootClass] - <HHH000038: Composite-id class does not override equals(): com.zhc.sys.entity.SysRoleToSysMenuId>
+2015-11-09 22:11:21,660 WARN [org.hibernate.mapping.RootClass] - <HHH000039: Composite-id class does not override hashCode(): com.zhc.sys.entity.SysRoleToSysMenuId>
+2015-11-09 22:11:21,674 INFO [org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory] - <HHH000397: Using ASTQueryTranslatorFactory>
+2015-11-09 22:11:22,149 INFO [org.hibernate.tool.hbm2ddl.SchemaUpdate] - <HHH000228: Running hbm2ddl schema update>
+2015-11-09 22:11:22,150 INFO [org.hibernate.tool.hbm2ddl.SchemaUpdate] - <HHH000102: Fetching database metadata>
+2015-11-09 22:11:22,159 INFO [org.hibernate.tool.hbm2ddl.SchemaUpdate] - <HHH000396: Updating schema>
+2015-11-09 22:11:22,182 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000261: Table found: qhdask.MailFailLog>
+2015-11-09 22:11:22,182 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000037: Columns: [senddate, content, id, title, execdate, status, exception, receivermails]>
+2015-11-09 22:11:22,182 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000108: Foreign keys: []>
+2015-11-09 22:11:22,183 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000126: Indexes: [primary]>
+2015-11-09 22:11:22,196 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000261: Table found: qhdask.ask_answer>
+2015-11-09 22:11:22,196 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000037: Columns: [member, id, status, answercontent]>
+2015-11-09 22:11:22,197 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000108: Foreign keys: []>
+2015-11-09 22:11:22,197 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000126: Indexes: [primary]>
+2015-11-09 22:11:22,214 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000261: Table found: qhdask.ask_classify>
+2015-11-09 22:11:22,214 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000037: Columns: [alias, link, createdate, img, parentid, id, extendf1, description, extendf2, name, ename, orderby, updatedate]>
+2015-11-09 22:11:22,215 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000108: Foreign keys: [fk_6noujkvl3n81tfnnfemv8nxjv]>
+2015-11-09 22:11:22,215 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000126: Indexes: [fk_6noujkvl3n81tfnnfemv8nxjv, primary]>
+2015-11-09 22:11:22,228 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000261: Table found: qhdask.ask_member>
+2015-11-09 22:11:22,229 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000037: Columns: [expertisearea, wechart, curryears, sex, truename, status, education, professional, photo, password, personprofile, id, jobtitle, loginname, currprofessional, school, address, email, servicefall, company, birthdate, role, telephone, qq]>
+2015-11-09 22:11:22,229 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000108: Foreign keys: []>
+2015-11-09 22:11:22,229 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000126: Indexes: [primary]>
+2015-11-09 22:11:22,239 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000261: Table found: qhdask.ask_question>
+2015-11-09 22:11:22,239 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000037: Columns: [member, id, classify, asktag, title, status, description]>
+2015-11-09 22:11:22,239 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000108: Foreign keys: []>
+2015-11-09 22:11:22,240 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000126: Indexes: [primary]>
+2015-11-09 22:11:22,250 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000261: Table found: qhdask.qz_job_detail>
+2015-11-09 22:11:22,251 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000037: Columns: [classname, id, extendf1, description, extendf3, extendf2, name, extendf5, extendf4, extendf7, parameters, extendf6, extendf8]>
+2015-11-09 22:11:22,251 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000108: Foreign keys: []>
+2015-11-09 22:11:22,251 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000126: Indexes: [primary]>
+2015-11-09 22:11:22,260 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000261: Table found: qhdask.qz_log>
+2015-11-09 22:11:22,260 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000037: Columns: [id, result, jobname, exectime, exception, otherremark]>
+2015-11-09 22:11:22,261 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000108: Foreign keys: []>
+2015-11-09 22:11:22,261 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000126: Indexes: [primary]>
+2015-11-09 22:11:22,275 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000261: Table found: qhdask.qz_trigger>
+2015-11-09 22:11:22,275 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000037: Columns: [cronexpression, status, qzjobdetail_id, repeatinterval, type, repeatcount, startdelay, id, startdate, extendf1, description, extendf3, name, extendf2, extendf5, extendf4, extendf7, extendf6, extendf9, enddate, extendf8]>
+2015-11-09 22:11:22,275 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000108: Foreign keys: [fk_2gypa1lpf5oij9ksti5ggo1s5]>
+2015-11-09 22:11:22,275 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000126: Indexes: [primary, fk_2gypa1lpf5oij9ksti5ggo1s5]>
+2015-11-09 22:11:22,293 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000261: Table found: qhdask.sysmenu>
+2015-11-09 22:11:22,293 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000037: Columns: [alias, link, createdate, img, parentid, id, extendf1, description, extendf2, name, ename, orderby, updatedate]>
+2015-11-09 22:11:22,293 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000108: Foreign keys: [fk_5p24yuafh3b9skc4qb4bp6ete]>
+2015-11-09 22:11:22,294 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000126: Indexes: [fk_5p24yuafh3b9skc4qb4bp6ete, primary]>
+2015-11-09 22:11:22,305 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000261: Table found: qhdask.syspopedom>
+2015-11-09 22:11:22,305 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000037: Columns: [id, description, sys_code]>
+2015-11-09 22:11:22,305 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000108: Foreign keys: []>
+2015-11-09 22:11:22,306 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000126: Indexes: [primary]>
+2015-11-09 22:11:22,315 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000261: Table found: qhdask.sysrole>
+2015-11-09 22:11:22,316 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000037: Columns: [id, extendf1, popedoms, description, name, extendf2, type]>
+2015-11-09 22:11:22,316 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000108: Foreign keys: []>
+2015-11-09 22:11:22,316 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000126: Indexes: [primary]>
+2015-11-09 22:11:22,326 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000261: Table found: qhdask.sysrole_syspopedom>
+2015-11-09 22:11:22,327 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000037: Columns: [syspopedom_id, sysrole_id]>
+2015-11-09 22:11:22,327 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000108: Foreign keys: [fk_oo7xoflcnvf8skw5omrbql5h9, fk_53kgl5trsotv45d01ox8o04ru]>
+2015-11-09 22:11:22,327 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000126: Indexes: [fk_oo7xoflcnvf8skw5omrbql5h9, primary]>
+2015-11-09 22:11:22,336 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000261: Table found: qhdask.sysroletosysmenu>
+2015-11-09 22:11:22,337 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000037: Columns: [sysmenu_id, extendf1, sysrole_id]>
+2015-11-09 22:11:22,337 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000108: Foreign keys: [fk_m56ufpq4f5xl2jrv8acjjxsk4, fk_bi2ymf7m10j8fe7d1ll4bq47q]>
+2015-11-09 22:11:22,337 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000126: Indexes: [fk_m56ufpq4f5xl2jrv8acjjxsk4, primary]>
+2015-11-09 22:11:22,347 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000261: Table found: qhdask.sysuser>
+2015-11-09 22:11:22,347 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000037: Columns: [id, loginname, phone, lastlogintime, truename, status, email, createdate, password]>
+2015-11-09 22:11:22,348 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000108: Foreign keys: []>
+2015-11-09 22:11:22,348 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000126: Indexes: [primary]>
+2015-11-09 22:11:22,357 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000261: Table found: qhdask.sysusertosysrole>
+2015-11-09 22:11:22,357 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000037: Columns: [id, sysuser_id, sysrole_id]>
+2015-11-09 22:11:22,358 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000108: Foreign keys: [fk_e5l6iwfa48hhxe0mog0ct1j44, fk_lmbccldu4qd824ptp58txfr6o]>
+2015-11-09 22:11:22,358 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000126: Indexes: [primary, fk_e5l6iwfa48hhxe0mog0ct1j44, fk_lmbccldu4qd824ptp58txfr6o]>
+2015-11-09 22:11:22,360 INFO [org.hibernate.tool.hbm2ddl.SchemaUpdate] - <HHH000232: Schema update complete>
+2015-11-09 22:11:22,860 INFO [org.quartz.impl.StdSchedulerFactory] - <Using default implementation for ThreadExecutor>
+2015-11-09 22:11:22,883 INFO [org.quartz.core.SchedulerSignalerImpl] - <Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl>
+2015-11-09 22:11:22,884 INFO [org.quartz.core.QuartzScheduler] - <Quartz Scheduler v.2.2.1 created.>
+2015-11-09 22:11:22,885 INFO [org.quartz.simpl.RAMJobStore] - <RAMJobStore initialized.>
+2015-11-09 22:11:22,886 INFO [org.quartz.core.QuartzScheduler] - <Scheduler meta-data: Quartz Scheduler (v2.2.1) 'scheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+>
+2015-11-09 22:11:22,886 INFO [org.quartz.impl.StdSchedulerFactory] - <Quartz scheduler 'scheduler' initialized from an externally provided properties instance.>
+2015-11-09 22:11:22,887 INFO [org.quartz.impl.StdSchedulerFactory] - <Quartz scheduler version: 2.2.1>
+2015-11-09 22:11:22,889 INFO [org.quartz.core.QuartzScheduler] - <JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@16d331cd>
+2015-11-09 22:11:22,899 INFO [com.zhc.schedule.quartz.ScheduleManager] - <任务调度器开始装载数据库任务信息....>
+2015-11-09 22:11:23,134 INFO [org.springframework.context.support.DefaultLifecycleProcessor] - <Starting beans in phase 2147483647>
+2015-11-09 22:11:23,135 INFO [org.springframework.scheduling.quartz.SchedulerFactoryBean] - <Starting Quartz Scheduler now>
+2015-11-09 22:11:23,135 INFO [org.quartz.core.QuartzScheduler] - <Scheduler scheduler_$_NON_CLUSTERED started.>
+2015-11-09 22:11:23,140 INFO [org.springframework.web.context.ContextLoader] - <Root WebApplicationContext: initialization completed in 3490 ms>
+2015-11-09 22:11:23,335 INFO [com.opensymphony.xwork2.config.providers.XmlConfigurationProvider] - <Parsing configuration file [struts-default.xml]>
+2015-11-09 22:11:23,409 INFO [com.opensymphony.xwork2.config.providers.XmlConfigurationProvider] - <Parsing configuration file [struts-plugin.xml]>
+2015-11-09 22:11:23,433 INFO [com.opensymphony.xwork2.config.providers.XmlConfigurationProvider] - <Parsing configuration file [struts.xml]>
+2015-11-09 22:11:23,437 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (spring) for (com.opensymphony.xwork2.ObjectFactory)>
+2015-11-09 22:11:23,437 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.FileManagerFactory)>
+2015-11-09 22:11:23,437 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.conversion.impl.XWorkConverter)>
+2015-11-09 22:11:23,437 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.conversion.impl.CollectionConverter)>
+2015-11-09 22:11:23,438 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.conversion.impl.ArrayConverter)>
+2015-11-09 22:11:23,438 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.conversion.impl.DateConverter)>
+2015-11-09 22:11:23,438 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.conversion.impl.NumberConverter)>
+2015-11-09 22:11:23,438 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.conversion.impl.StringConverter)>
+2015-11-09 22:11:23,438 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.conversion.ConversionPropertiesProcessor)>
+2015-11-09 22:11:23,438 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.conversion.ConversionFileProcessor)>
+2015-11-09 22:11:23,438 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.conversion.ConversionAnnotationProcessor)>
+2015-11-09 22:11:23,439 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.conversion.TypeConverterCreator)>
+2015-11-09 22:11:23,439 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.conversion.TypeConverterHolder)>
+2015-11-09 22:11:23,439 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.TextProvider)>
+2015-11-09 22:11:23,439 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.LocaleProvider)>
+2015-11-09 22:11:23,439 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.ActionProxyFactory)>
+2015-11-09 22:11:23,439 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.conversion.ObjectTypeDeterminer)>
+2015-11-09 22:11:23,439 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (org.apache.struts2.dispatcher.mapper.ActionMapper)>
+2015-11-09 22:11:23,440 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (jakarta) for (org.apache.struts2.dispatcher.multipart.MultiPartRequest)>
+2015-11-09 22:11:23,440 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (org.apache.struts2.views.freemarker.FreemarkerManager)>
+2015-11-09 22:11:23,441 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (org.apache.struts2.components.UrlRenderer)>
+2015-11-09 22:11:23,442 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.validator.ActionValidatorManager)>
+2015-11-09 22:11:23,442 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.util.ValueStackFactory)>
+2015-11-09 22:11:23,442 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.util.reflection.ReflectionProvider)>
+2015-11-09 22:11:23,442 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.util.reflection.ReflectionContextFactory)>
+2015-11-09 22:11:23,442 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.util.PatternMatcher)>
+2015-11-09 22:11:23,442 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (org.apache.struts2.dispatcher.StaticContentLoader)>
+2015-11-09 22:11:23,442 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.UnknownHandlerManager)>
+2015-11-09 22:11:23,442 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (org.apache.struts2.views.util.UrlHelper)>
+2015-11-09 22:11:23,443 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.util.TextParser)>
+2015-11-09 22:11:23,457 INFO [org.apache.struts2.spring.StrutsSpringObjectFactory] - <Initializing Struts-Spring integration...>
+2015-11-09 22:11:23,458 INFO [com.opensymphony.xwork2.spring.SpringObjectFactory] - <Setting autowire strategy to name>
+2015-11-09 22:11:23,458 INFO [org.apache.struts2.spring.StrutsSpringObjectFactory] - <... initialized Struts-Spring integration successfully>
+2015-11-09 22:11:24,020 INFO [org.springframework.web.servlet.DispatcherServlet] - <FrameworkServlet 'appServlet': initialization started>
+2015-11-09 22:11:24,023 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - <Refreshing WebApplicationContext for namespace 'appServlet-servlet': startup date [Mon Nov 09 22:11:24 CST 2015]; parent: Root WebApplicationContext>
+2015-11-09 22:11:24,024 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/appServlet/servlet-context.xml]>
+2015-11-09 22:11:24,111 INFO [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] - <JSR-330 'javax.inject.Inject' annotation found and supported for autowiring>
+2015-11-09 22:11:24,444 INFO [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping] - <Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'>
+2015-11-09 22:11:24,477 INFO [org.springframework.web.servlet.DispatcherServlet] - <FrameworkServlet 'appServlet': initialization completed in 457 ms>
+2015-11-09 22:11:30,159 WARN [org.hibernate.hql.internal.ast.HqlSqlWalker] - <[DEPRECATION] Encountered positional parameter near line 1, column 60.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.>
+2015-11-09 22:11:30,163 WARN [org.hibernate.hql.internal.ast.HqlSqlWalker] - <[DEPRECATION] Encountered positional parameter near line 1, column 75.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.>
+2015-11-09 22:12:35,438 WARN [org.apache.struts2.dispatcher.Dispatcher] - <Could not find action or result>
+There is no Action mapped for namespace [/sys/ask] and action name [toEditClassify] associated with context path [/qhdask]. - [unknown location]
+	at com.opensymphony.xwork2.DefaultActionProxy.prepare(DefaultActionProxy.java:185)
+	at org.apache.struts2.impl.StrutsActionProxy.prepare(StrutsActionProxy.java:63)
+	at org.apache.struts2.impl.StrutsActionProxyFactory.createActionProxy(StrutsActionProxyFactory.java:39)
+	at com.opensymphony.xwork2.DefaultActionProxyFactory.createActionProxy(DefaultActionProxyFactory.java:58)
+	at org.apache.struts2.dispatcher.Dispatcher.serviceAction(Dispatcher.java:553)
+	at org.apache.struts2.dispatcher.ng.ExecuteOperations.executeAction(ExecuteOperations.java:77)
+	at org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter.doFilter(StrutsPrepareAndExecuteFilter.java:99)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at com.zhc.sys.action.filter.LoginFilter.doFilter(LoginFilter.java:48)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at org.springframework.orm.jpa.support.OpenEntityManagerInViewFilter.doFilterInternal(OpenEntityManagerInViewFilter.java:177)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at org.mortbay.jetty.servlet.ServletHandler.handle(ServletHandler.java:399)
+	at org.mortbay.jetty.security.SecurityHandler.handle(SecurityHandler.java:216)
+	at org.mortbay.jetty.servlet.SessionHandler.handle(SessionHandler.java:182)
+	at org.mortbay.jetty.handler.ContextHandler.handle(ContextHandler.java:766)
+	at org.mortbay.jetty.webapp.WebAppContext.handle(WebAppContext.java:450)
+	at org.mortbay.jetty.handler.HandlerWrapper.handle(HandlerWrapper.java:152)
+	at org.mortbay.jetty.Server.handle(Server.java:326)
+	at org.mortbay.jetty.HttpConnection.handleRequest(HttpConnection.java:542)
+	at org.mortbay.jetty.HttpConnection$RequestHandler.headerComplete(HttpConnection.java:928)
+	at org.mortbay.jetty.HttpParser.parseNext(HttpParser.java:549)
+	at org.mortbay.jetty.HttpParser.parseAvailable(HttpParser.java:212)
+	at org.mortbay.jetty.HttpConnection.handle(HttpConnection.java:404)
+	at org.mortbay.io.nio.SelectChannelEndPoint.run(SelectChannelEndPoint.java:410)
+	at org.mortbay.thread.QueuedThreadPool$PoolThread.run(QueuedThreadPool.java:582)
+2015-11-09 22:12:35,440 ERROR [org.apache.struts2.dispatcher.Dispatcher] - <Exception occurred during processing request: There is no Action mapped for namespace [/sys/ask] and action name [toEditClassify] associated with context path [/qhdask].>
+There is no Action mapped for namespace [/sys/ask] and action name [toEditClassify] associated with context path [/qhdask]. - [unknown location]
+	at com.opensymphony.xwork2.DefaultActionProxy.prepare(DefaultActionProxy.java:185)
+	at org.apache.struts2.impl.StrutsActionProxy.prepare(StrutsActionProxy.java:63)
+	at org.apache.struts2.impl.StrutsActionProxyFactory.createActionProxy(StrutsActionProxyFactory.java:39)
+	at com.opensymphony.xwork2.DefaultActionProxyFactory.createActionProxy(DefaultActionProxyFactory.java:58)
+	at org.apache.struts2.dispatcher.Dispatcher.serviceAction(Dispatcher.java:553)
+	at org.apache.struts2.dispatcher.ng.ExecuteOperations.executeAction(ExecuteOperations.java:77)
+	at org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter.doFilter(StrutsPrepareAndExecuteFilter.java:99)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at com.zhc.sys.action.filter.LoginFilter.doFilter(LoginFilter.java:48)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at org.springframework.orm.jpa.support.OpenEntityManagerInViewFilter.doFilterInternal(OpenEntityManagerInViewFilter.java:177)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at org.mortbay.jetty.servlet.ServletHandler.handle(ServletHandler.java:399)
+	at org.mortbay.jetty.security.SecurityHandler.handle(SecurityHandler.java:216)
+	at org.mortbay.jetty.servlet.SessionHandler.handle(SessionHandler.java:182)
+	at org.mortbay.jetty.handler.ContextHandler.handle(ContextHandler.java:766)
+	at org.mortbay.jetty.webapp.WebAppContext.handle(WebAppContext.java:450)
+	at org.mortbay.jetty.handler.HandlerWrapper.handle(HandlerWrapper.java:152)
+	at org.mortbay.jetty.Server.handle(Server.java:326)
+	at org.mortbay.jetty.HttpConnection.handleRequest(HttpConnection.java:542)
+	at org.mortbay.jetty.HttpConnection$RequestHandler.headerComplete(HttpConnection.java:928)
+	at org.mortbay.jetty.HttpParser.parseNext(HttpParser.java:549)
+	at org.mortbay.jetty.HttpParser.parseAvailable(HttpParser.java:212)
+	at org.mortbay.jetty.HttpConnection.handle(HttpConnection.java:404)
+	at org.mortbay.io.nio.SelectChannelEndPoint.run(SelectChannelEndPoint.java:410)
+	at org.mortbay.thread.QueuedThreadPool$PoolThread.run(QueuedThreadPool.java:582)
+2015-11-09 22:14:18,511 INFO [org.springframework.web.context.ContextLoader] - <Root WebApplicationContext: initialization started>
+2015-11-09 22:14:18,621 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - <Refreshing Root WebApplicationContext: startup date [Mon Nov 09 22:14:18 CST 2015]; root of context hierarchy>
+2015-11-09 22:14:18,665 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/root-context.xml]>
+2015-11-09 22:14:18,995 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/service.spring.xml]>
+2015-11-09 22:14:19,018 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/mail.spring.xml]>
+2015-11-09 22:14:19,039 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/scheduler.spring.xml]>
+2015-11-09 22:14:19,061 INFO [org.springframework.beans.factory.support.DefaultListableBeanFactory] - <Overriding bean definition for bean 'scheduleService': replacing [Generic bean: class [com.zhc.schedule.quartz.service.ScheduleServiceImpl]; scope=; abstract=false; lazyInit=false; autowireMode=1; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in ServletContext resource [/WEB-INF/spring/service.spring.xml]] with [Generic bean: class [com.zhc.schedule.quartz.service.ScheduleServiceImpl]; scope=; abstract=false; lazyInit=false; autowireMode=1; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in ServletContext resource [/WEB-INF/spring/scheduler.spring.xml]]>
+2015-11-09 22:14:19,232 INFO [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] - <JSR-330 'javax.inject.Inject' annotation found and supported for autowiring>
+2015-11-09 22:14:19,827 INFO [com.alibaba.druid.pool.DruidDataSource] - <{dataSource-1} inited>
+2015-11-09 22:14:19,886 INFO [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] - <Building JPA container EntityManagerFactory for persistence unit 'zhc'>
+2015-11-09 22:14:19,927 INFO [org.hibernate.jpa.internal.util.LogHelper] - <HHH000204: Processing PersistenceUnitInfo [
+	name: zhc
+	...]>
+2015-11-09 22:14:20,031 INFO [org.hibernate.Version] - <HHH000412: Hibernate Core {4.3.5.Final}>
+2015-11-09 22:14:20,033 INFO [org.hibernate.cfg.Environment] - <HHH000206: hibernate.properties not found>
+2015-11-09 22:14:20,035 INFO [org.hibernate.cfg.Environment] - <HHH000021: Bytecode provider name : javassist>
+2015-11-09 22:14:20,317 INFO [org.hibernate.annotations.common.Version] - <HCANN000001: Hibernate Commons Annotations {4.0.4.Final}>
+2015-11-09 22:14:20,367 INFO [org.hibernate.dialect.Dialect] - <HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect>
+2015-11-09 22:14:20,378 INFO [org.hibernate.engine.jdbc.internal.LobCreatorBuilder] - <HHH000422: Disabling contextual LOB creation as connection was null>
+2015-11-09 22:14:20,591 WARN [org.hibernate.mapping.RootClass] - <HHH000038: Composite-id class does not override equals(): com.zhc.sys.entity.SysRoleToSysMenuId>
+2015-11-09 22:14:20,592 WARN [org.hibernate.mapping.RootClass] - <HHH000039: Composite-id class does not override hashCode(): com.zhc.sys.entity.SysRoleToSysMenuId>
+2015-11-09 22:14:20,609 INFO [org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory] - <HHH000397: Using ASTQueryTranslatorFactory>
+2015-11-09 22:14:21,088 INFO [org.hibernate.tool.hbm2ddl.SchemaUpdate] - <HHH000228: Running hbm2ddl schema update>
+2015-11-09 22:14:21,088 INFO [org.hibernate.tool.hbm2ddl.SchemaUpdate] - <HHH000102: Fetching database metadata>
+2015-11-09 22:14:21,098 INFO [org.hibernate.tool.hbm2ddl.SchemaUpdate] - <HHH000396: Updating schema>
+2015-11-09 22:14:21,130 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000261: Table found: qhdask.MailFailLog>
+2015-11-09 22:14:21,130 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000037: Columns: [senddate, content, id, title, execdate, status, exception, receivermails]>
+2015-11-09 22:14:21,130 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000108: Foreign keys: []>
+2015-11-09 22:14:21,130 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000126: Indexes: [primary]>
+2015-11-09 22:14:21,155 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000261: Table found: qhdask.ask_answer>
+2015-11-09 22:14:21,155 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000037: Columns: [member, id, status, answercontent]>
+2015-11-09 22:14:21,155 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000108: Foreign keys: []>
+2015-11-09 22:14:21,156 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000126: Indexes: [primary]>
+2015-11-09 22:14:21,170 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000261: Table found: qhdask.ask_classify>
+2015-11-09 22:14:21,170 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000037: Columns: [alias, link, createdate, img, parentid, id, extendf1, description, extendf2, name, ename, orderby, updatedate]>
+2015-11-09 22:14:21,170 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000108: Foreign keys: [fk_6noujkvl3n81tfnnfemv8nxjv]>
+2015-11-09 22:14:21,170 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000126: Indexes: [fk_6noujkvl3n81tfnnfemv8nxjv, primary]>
+2015-11-09 22:14:21,184 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000261: Table found: qhdask.ask_member>
+2015-11-09 22:14:21,184 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000037: Columns: [expertisearea, wechart, curryears, sex, truename, status, education, professional, photo, password, personprofile, id, jobtitle, loginname, currprofessional, school, address, email, servicefall, company, birthdate, role, telephone, qq]>
+2015-11-09 22:14:21,184 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000108: Foreign keys: []>
+2015-11-09 22:14:21,184 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000126: Indexes: [primary]>
+2015-11-09 22:14:21,194 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000261: Table found: qhdask.ask_question>
+2015-11-09 22:14:21,194 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000037: Columns: [member, id, classify, asktag, title, status, description]>
+2015-11-09 22:14:21,194 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000108: Foreign keys: []>
+2015-11-09 22:14:21,194 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000126: Indexes: [primary]>
+2015-11-09 22:14:21,206 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000261: Table found: qhdask.qz_job_detail>
+2015-11-09 22:14:21,207 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000037: Columns: [classname, id, extendf1, description, extendf3, extendf2, name, extendf5, extendf4, extendf7, parameters, extendf6, extendf8]>
+2015-11-09 22:14:21,208 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000108: Foreign keys: []>
+2015-11-09 22:14:21,208 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000126: Indexes: [primary]>
+2015-11-09 22:14:21,220 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000261: Table found: qhdask.qz_log>
+2015-11-09 22:14:21,221 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000037: Columns: [id, result, jobname, exectime, exception, otherremark]>
+2015-11-09 22:14:21,221 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000108: Foreign keys: []>
+2015-11-09 22:14:21,221 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000126: Indexes: [primary]>
+2015-11-09 22:14:21,240 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000261: Table found: qhdask.qz_trigger>
+2015-11-09 22:14:21,240 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000037: Columns: [cronexpression, status, qzjobdetail_id, repeatinterval, type, repeatcount, startdelay, id, startdate, extendf1, description, extendf3, name, extendf2, extendf5, extendf4, extendf7, extendf6, extendf9, enddate, extendf8]>
+2015-11-09 22:14:21,240 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000108: Foreign keys: [fk_2gypa1lpf5oij9ksti5ggo1s5]>
+2015-11-09 22:14:21,241 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000126: Indexes: [primary, fk_2gypa1lpf5oij9ksti5ggo1s5]>
+2015-11-09 22:14:21,258 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000261: Table found: qhdask.sysmenu>
+2015-11-09 22:14:21,258 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000037: Columns: [alias, link, createdate, img, parentid, id, extendf1, description, extendf2, name, ename, orderby, updatedate]>
+2015-11-09 22:14:21,258 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000108: Foreign keys: [fk_5p24yuafh3b9skc4qb4bp6ete]>
+2015-11-09 22:14:21,259 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000126: Indexes: [fk_5p24yuafh3b9skc4qb4bp6ete, primary]>
+2015-11-09 22:14:21,268 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000261: Table found: qhdask.syspopedom>
+2015-11-09 22:14:21,269 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000037: Columns: [id, description, sys_code]>
+2015-11-09 22:14:21,269 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000108: Foreign keys: []>
+2015-11-09 22:14:21,269 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000126: Indexes: [primary]>
+2015-11-09 22:14:21,280 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000261: Table found: qhdask.sysrole>
+2015-11-09 22:14:21,280 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000037: Columns: [id, extendf1, popedoms, description, name, extendf2, type]>
+2015-11-09 22:14:21,280 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000108: Foreign keys: []>
+2015-11-09 22:14:21,280 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000126: Indexes: [primary]>
+2015-11-09 22:14:21,290 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000261: Table found: qhdask.sysrole_syspopedom>
+2015-11-09 22:14:21,291 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000037: Columns: [syspopedom_id, sysrole_id]>
+2015-11-09 22:14:21,291 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000108: Foreign keys: [fk_oo7xoflcnvf8skw5omrbql5h9, fk_53kgl5trsotv45d01ox8o04ru]>
+2015-11-09 22:14:21,291 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000126: Indexes: [fk_oo7xoflcnvf8skw5omrbql5h9, primary]>
+2015-11-09 22:14:21,301 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000261: Table found: qhdask.sysroletosysmenu>
+2015-11-09 22:14:21,301 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000037: Columns: [sysmenu_id, extendf1, sysrole_id]>
+2015-11-09 22:14:21,301 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000108: Foreign keys: [fk_m56ufpq4f5xl2jrv8acjjxsk4, fk_bi2ymf7m10j8fe7d1ll4bq47q]>
+2015-11-09 22:14:21,301 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000126: Indexes: [fk_m56ufpq4f5xl2jrv8acjjxsk4, primary]>
+2015-11-09 22:14:21,311 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000261: Table found: qhdask.sysuser>
+2015-11-09 22:14:21,311 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000037: Columns: [id, loginname, phone, lastlogintime, truename, status, email, createdate, password]>
+2015-11-09 22:14:21,311 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000108: Foreign keys: []>
+2015-11-09 22:14:21,311 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000126: Indexes: [primary]>
+2015-11-09 22:14:21,319 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000261: Table found: qhdask.sysusertosysrole>
+2015-11-09 22:14:21,319 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000037: Columns: [id, sysuser_id, sysrole_id]>
+2015-11-09 22:14:21,319 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000108: Foreign keys: [fk_e5l6iwfa48hhxe0mog0ct1j44, fk_lmbccldu4qd824ptp58txfr6o]>
+2015-11-09 22:14:21,319 INFO [org.hibernate.tool.hbm2ddl.TableMetadata] - <HHH000126: Indexes: [primary, fk_e5l6iwfa48hhxe0mog0ct1j44, fk_lmbccldu4qd824ptp58txfr6o]>
+2015-11-09 22:14:21,321 INFO [org.hibernate.tool.hbm2ddl.SchemaUpdate] - <HHH000232: Schema update complete>
+2015-11-09 22:14:21,787 INFO [org.quartz.impl.StdSchedulerFactory] - <Using default implementation for ThreadExecutor>
+2015-11-09 22:14:21,809 INFO [org.quartz.core.SchedulerSignalerImpl] - <Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl>
+2015-11-09 22:14:21,810 INFO [org.quartz.core.QuartzScheduler] - <Quartz Scheduler v.2.2.1 created.>
+2015-11-09 22:14:21,812 INFO [org.quartz.simpl.RAMJobStore] - <RAMJobStore initialized.>
+2015-11-09 22:14:21,813 INFO [org.quartz.core.QuartzScheduler] - <Scheduler meta-data: Quartz Scheduler (v2.2.1) 'scheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+>
+2015-11-09 22:14:21,814 INFO [org.quartz.impl.StdSchedulerFactory] - <Quartz scheduler 'scheduler' initialized from an externally provided properties instance.>
+2015-11-09 22:14:21,814 INFO [org.quartz.impl.StdSchedulerFactory] - <Quartz scheduler version: 2.2.1>
+2015-11-09 22:14:21,816 INFO [org.quartz.core.QuartzScheduler] - <JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@224a5f25>
+2015-11-09 22:14:21,825 INFO [com.zhc.schedule.quartz.ScheduleManager] - <任务调度器开始装载数据库任务信息....>
+2015-11-09 22:14:22,059 INFO [org.springframework.context.support.DefaultLifecycleProcessor] - <Starting beans in phase 2147483647>
+2015-11-09 22:14:22,059 INFO [org.springframework.scheduling.quartz.SchedulerFactoryBean] - <Starting Quartz Scheduler now>
+2015-11-09 22:14:22,059 INFO [org.quartz.core.QuartzScheduler] - <Scheduler scheduler_$_NON_CLUSTERED started.>
+2015-11-09 22:14:22,065 INFO [org.springframework.web.context.ContextLoader] - <Root WebApplicationContext: initialization completed in 3551 ms>
+2015-11-09 22:14:22,270 INFO [com.opensymphony.xwork2.config.providers.XmlConfigurationProvider] - <Parsing configuration file [struts-default.xml]>
+2015-11-09 22:14:22,349 INFO [com.opensymphony.xwork2.config.providers.XmlConfigurationProvider] - <Parsing configuration file [struts-plugin.xml]>
+2015-11-09 22:14:22,374 INFO [com.opensymphony.xwork2.config.providers.XmlConfigurationProvider] - <Parsing configuration file [struts.xml]>
+2015-11-09 22:14:22,378 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (spring) for (com.opensymphony.xwork2.ObjectFactory)>
+2015-11-09 22:14:22,378 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.FileManagerFactory)>
+2015-11-09 22:14:22,378 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.conversion.impl.XWorkConverter)>
+2015-11-09 22:14:22,378 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.conversion.impl.CollectionConverter)>
+2015-11-09 22:14:22,378 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.conversion.impl.ArrayConverter)>
+2015-11-09 22:14:22,379 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.conversion.impl.DateConverter)>
+2015-11-09 22:14:22,379 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.conversion.impl.NumberConverter)>
+2015-11-09 22:14:22,379 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.conversion.impl.StringConverter)>
+2015-11-09 22:14:22,379 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.conversion.ConversionPropertiesProcessor)>
+2015-11-09 22:14:22,379 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.conversion.ConversionFileProcessor)>
+2015-11-09 22:14:22,379 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.conversion.ConversionAnnotationProcessor)>
+2015-11-09 22:14:22,379 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.conversion.TypeConverterCreator)>
+2015-11-09 22:14:22,379 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.conversion.TypeConverterHolder)>
+2015-11-09 22:14:22,379 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.TextProvider)>
+2015-11-09 22:14:22,380 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.LocaleProvider)>
+2015-11-09 22:14:22,380 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.ActionProxyFactory)>
+2015-11-09 22:14:22,380 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.conversion.ObjectTypeDeterminer)>
+2015-11-09 22:14:22,380 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (org.apache.struts2.dispatcher.mapper.ActionMapper)>
+2015-11-09 22:14:22,380 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (jakarta) for (org.apache.struts2.dispatcher.multipart.MultiPartRequest)>
+2015-11-09 22:14:22,380 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (org.apache.struts2.views.freemarker.FreemarkerManager)>
+2015-11-09 22:14:22,381 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (org.apache.struts2.components.UrlRenderer)>
+2015-11-09 22:14:22,382 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.validator.ActionValidatorManager)>
+2015-11-09 22:14:22,382 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.util.ValueStackFactory)>
+2015-11-09 22:14:22,382 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.util.reflection.ReflectionProvider)>
+2015-11-09 22:14:22,382 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.util.reflection.ReflectionContextFactory)>
+2015-11-09 22:14:22,382 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.util.PatternMatcher)>
+2015-11-09 22:14:22,382 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (org.apache.struts2.dispatcher.StaticContentLoader)>
+2015-11-09 22:14:22,382 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.UnknownHandlerManager)>
+2015-11-09 22:14:22,383 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (org.apache.struts2.views.util.UrlHelper)>
+2015-11-09 22:14:22,383 INFO [org.apache.struts2.config.BeanSelectionProvider] - <Choosing bean (struts) for (com.opensymphony.xwork2.util.TextParser)>
+2015-11-09 22:14:22,400 INFO [org.apache.struts2.spring.StrutsSpringObjectFactory] - <Initializing Struts-Spring integration...>
+2015-11-09 22:14:22,400 INFO [com.opensymphony.xwork2.spring.SpringObjectFactory] - <Setting autowire strategy to name>
+2015-11-09 22:14:22,400 INFO [org.apache.struts2.spring.StrutsSpringObjectFactory] - <... initialized Struts-Spring integration successfully>
+2015-11-09 22:14:23,068 INFO [org.springframework.web.servlet.DispatcherServlet] - <FrameworkServlet 'appServlet': initialization started>
+2015-11-09 22:14:23,071 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - <Refreshing WebApplicationContext for namespace 'appServlet-servlet': startup date [Mon Nov 09 22:14:23 CST 2015]; parent: Root WebApplicationContext>
+2015-11-09 22:14:23,072 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - <Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/appServlet/servlet-context.xml]>
+2015-11-09 22:14:23,161 INFO [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] - <JSR-330 'javax.inject.Inject' annotation found and supported for autowiring>
+2015-11-09 22:14:23,466 INFO [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping] - <Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'>
+2015-11-09 22:14:23,499 INFO [org.springframework.web.servlet.DispatcherServlet] - <FrameworkServlet 'appServlet': initialization completed in 431 ms>
+2015-11-09 22:14:28,966 WARN [org.hibernate.hql.internal.ast.HqlSqlWalker] - <[DEPRECATION] Encountered positional parameter near line 1, column 60.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.>
+2015-11-09 22:14:28,969 WARN [org.hibernate.hql.internal.ast.HqlSqlWalker] - <[DEPRECATION] Encountered positional parameter near line 1, column 75.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.>

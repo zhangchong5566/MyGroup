@@ -1,0 +1,320 @@
+.default-button a {
+	text-transform: capitalize;
+	display: inline-block;
+	background: none repeat scroll 0% 0% #038ADE;
+	color: #FFF;
+	padding: 10px 20px;
+	border-radius: 3px;
+}
+
+.timeline {
+	background: #f7f6f1;
+	padding: 100px 0;
+	border-bottom: 1px solid #e0dfdf;
+	margin-bottom: 1px;
+	text-align: center;
+}
+
+.timeline ul {
+/*	background: url('../../img/upload/timeline.jpg') no-repeat center;*/
+	height: 23px;
+}
+
+.timeline ul li {
+	display: inline-block;
+	width: 20%;
+	color: #abaaa3;
+	font-size: 11px;
+	text-transform: uppercase;
+	padding-top: 30px;
+	text-align: center;
+}
+.timeline .guide-text {
+	color:#abaaa3;
+	font-size: 20px;
+	text-transform: capitalize;
+	font-weight: normal;
+}
+
+.upload-step input[type="text"] {
+	height: 30px;
+}
+
+.upload-step h3 {
+	background: #f7f6f1;
+	height: 48px;
+	line-height: 48px;
+	text-transform: uppercase;
+	color: #abaaa3;
+}
+
+.upload-step h3 span {
+	font-size: 25px;
+	background: #d5d1bb;
+	color: #fff;
+	font-weight: bold;
+	text-align: center;
+	display: inline-block;
+	width: 48px;
+	height: 48px;
+	margin: 0 15px 0 0px;
+}
+
+.upload-inner {
+	padding: 30px;
+}
+
+span.info {
+	background: url('../../img/upload/iconinfo.png') no-repeat left;
+	color: #c3c3c3;
+	padding: 0 0 0 30px;
+	font-size: 12px;
+	height: 23px;
+	display: block;
+	line-height: 23px;
+}
+
+.request {
+	font-size: 10px;
+	margin-top: 10px;
+	color: #a4a4a4;
+}
+
+.droptext {
+	color: #a4a4a4;
+	font-size: 16px;
+	background: url('../../img/upload/iconupload.png') no-repeat left;
+	padding-left: 40px;
+	display: inline-block;
+	height: 30px;
+	line-height: 30px;
+}
+
+.dropbtn {
+	display: block;
+}
+
+.dropbtn input[type="file"] {
+	height: 30px;
+}
+
+.desbox {
+	padding: 20px 0;
+}
+
+.desbox input {
+	height: 30px;
+	width: 50%;
+	padding: 4px;
+	border: 1px solid #ccc;
+	border-top: 1px solid #aaa;
+	background: #fcfcfc;
+	transition: box-shadow 0.3s;
+	padding: 4px;
+}
+
+.desitem {
+	padding: 10px 0;
+	margin: 0 0 10px 0;
+}
+
+.desitem label {
+	color: #636363;
+	font-size: 14px;
+	text-transform: capitalize;
+	display: block;
+	margin: 0 0 10px 0;
+}
+
+.dessupply {
+	height: 30px;
+	line-height: 30px;
+	font-size: 13px;
+	margin-bottom: 15px;
+}
+
+.dessupply .supplybtn {
+	background: #434141;
+	color: #fff;
+	font-size: 20px;
+	float: right;
+	height: 30px;
+	line-height: 27px;
+	width: 30px;
+	text-align: center;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+}
+
+.pubbox .pubitem {
+	text-align: center;
+	display: inline-block;
+	width: 390px;
+	border: 1px solid #e5e5e5;
+	padding: 60px 20px 40px 20px;
+	margin-right: 28px;
+}
+
+.pubbox .pubitem:hover {
+	border: 1px solid #038ade;
+}
+
+.pubbox .pubitem h4 {
+	color: #6d6d6d;
+	margin-bottom: 30px;
+	font-size: 18px;
+}
+
+.pubbox .pubitem .pubprice {
+	color: #9f9f9f;
+	font-size: 11px;
+	padding: 20px 0 0 0;
+}
+
+.pubprice .hb {
+	color: #013759;
+	margin-top: 5px;
+}
+
+.pubbox .pubitem.lastitem {
+	margin: 0;
+}
+
+.pubbox .pubitem span {
+	display: block;
+}
+
+.pubbox .pubextra {
+	text-align: left;
+	margin: 20px 0 0 0;
+	padding: 10px 0;
+}
+
+.pubbox .pubextra input {
+	width: 100%;
+	height: 30px;
+}
+
+.pubbox .pubextra span {
+	color: #91969a;
+	font-size: 12px;
+	margin-bottom: 15px;
+}
+
+.errorbox {
+	color: red;
+}
+
+.extra-info {
+	margin-bottom: 8px;
+}
+/* expand style */
+.dropexpand {
+	background: #f7f6f1 url('../../img/upload/droparrow.png') no-repeat
+		center top;
+	padding: 50px;
+	margin-top: 20px;
+}
+/*------*/
+#htmlAreaUpload h4 {
+	background: #F7F6F1;
+	height: 50px;
+	line-height: 50px;
+}
+
+.pulbishbutton {
+	margin-top: 60px;
+	text-align: right;
+}
+
+.photobutton {
+	margin-top: 10px;
+}
+
+.photobutton a {
+	padding: 5px;
+	font-size: 15px;
+}
+
+#descriptionDiv div span {
+	margin-right: 20px;
+}
+
+#descriptionDiv div span:last-child {
+	margin: 0;
+}
+
+
+/*-----------------publishspan-----*/
+.publishspan {
+	font-size: 22px;
+	font-weight: bold;
+	font-style: normal;
+	text-decoration: none;
+	color: #013759;
+	text-transform: uppercase;
+}
+
+.pubitembutton {
+	margin-top: 20px;
+	text-align: right;
+}
+
+.dropzone.nbpadding {
+	padding-bottom: 0px;
+}
+
+.mess-div {
+	padding: 20px;
+}
+
+.mess-div input[type="text"] {
+	width: 100%;
+}
+
+.div-title {
+	background: #F7F6F1;
+	line-height: 16px;
+	font-size: 18px;
+	padding: 15px 20px;
+	text-align: center;
+	font-weight: bold;
+}
+
+.div-mess {
+	text-align: center;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+/*---------------*/
+.stable {
+	width: 100%;
+	margin: 0px auto;
+}
+
+.stable thead tr {
+	background-color: #fff;
+}
+
+.stable thead tr th {
+	padding: 12px;
+	text-align: left;
+	font-size: 15px;
+	color: #888;
+}
+
+.stable tbody tr {
+	border-top: 1px #fff solid;
+}
+
+.stable tbody tr td {
+	padding: 12px;
+	text-align: left;
+	vertical-align: middle;
+	font-size: 13px;
+}
+
+.stable tbody tr td a {
+	margin-left: 15px;
+}

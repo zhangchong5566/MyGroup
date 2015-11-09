@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jee="http://www.springframework.org/schema/jee" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="
+			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+			http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+			http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-2.5.xsd
+			http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+
+	<bean id="objectMapper" class="com.zhc.sys.service.CustomMapper">
+	</bean>
+	
+	<!-- 运营后台 -->
+	<bean id="scheduleService" class="com.zhc.schedule.quartz.service.ScheduleServiceImpl"
+		autowire="byName">
+	</bean>
+	
+	<bean id="sysUserService" class="com.zhc.sys.service.SysUserServiceImpl"
+		autowire="byName">
+	</bean>
+	<bean id="sysMenuService" class="com.zhc.sys.service.SysMenuServiceImpl"
+		autowire="byName">
+	</bean>
+	<bean id="sysPopedomService" class="com.zhc.sys.service.SysPopedomServiceImpl"
+		autowire="byName">
+	</bean>
+	
+	<bean id="sysRoleService" class="com.zhc.sys.service.SysRoleServiceImpl"
+		autowire="byName">
+	</bean>
+	
+	<bean id="askClassifyService" class="com.zhc.ask.service.AskClassifyServiceImpl"
+		autowire="byName">
+	</bean>
+	
+	<bean id="askMemberService" class="com.zhc.ask.service.AskMemberServiceImpl"
+		autowire="byName">
+	</bean>
+	
+	<bean id="askQuestionService" class="com.zhc.ask.service.AskQuestionServiceImpl"
+		autowire="byName">
+	</bean>
+	
+	<bean id="askAnswerService" class="com.zhc.ask.service.AskQuestionServiceImpl"
+		autowire="byName">
+	</bean>
+
+</beans>
