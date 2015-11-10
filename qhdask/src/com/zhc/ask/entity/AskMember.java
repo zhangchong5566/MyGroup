@@ -33,7 +33,7 @@ public class AskMember  extends AbstractEntityGenerate implements Serializable{
 	
 	private Integer role;//1，普通用户；2，专家
 	
-	private Integer status;//状态，1-普通用户待审核，不能提问，2-普通用户已审核，3-专家待审核，4-专家已审核
+	private Integer status;//状态，1-待审核（普通用户待审核不能提问，专家待审核不能回答问题），2-已审核
 	
 	private String trueName;//姓名
 	
@@ -61,9 +61,9 @@ public class AskMember  extends AbstractEntityGenerate implements Serializable{
 	
 	private String telephone;//联系电话
 	
-	private String qq;
+	private String qqWeChart;//QQ、微信
 	
-	private String weChart;//微信
+	private String expretTitle;//专家称号
 	
 	private String personProfile;//个人简介
 	
@@ -73,7 +73,9 @@ public class AskMember  extends AbstractEntityGenerate implements Serializable{
 	
 	private String photo;//个人照片
 	
+	private Date joinDate;//注册时间
 	
+	private Date lastLoginDate;//最后时间
 
 	public Integer getRole() {
 		return role;
@@ -213,20 +215,21 @@ public class AskMember  extends AbstractEntityGenerate implements Serializable{
 		this.telephone = telephone;
 	}
 
-	public String getQq() {
-		return qq;
+
+	public String getQqWeChart() {
+		return qqWeChart;
 	}
 
-	public void setQq(String qq) {
-		this.qq = qq;
+	public void setQqWeChart(String qqWeChart) {
+		this.qqWeChart = qqWeChart;
 	}
 
-	public String getWeChart() {
-		return weChart;
+	public String getExpretTitle() {
+		return expretTitle;
 	}
 
-	public void setWeChart(String weChart) {
-		this.weChart = weChart;
+	public void setExpretTitle(String expretTitle) {
+		this.expretTitle = expretTitle;
 	}
 
 	@Column(columnDefinition="TEXT")
@@ -263,5 +266,23 @@ public class AskMember  extends AbstractEntityGenerate implements Serializable{
 	public void setPhoto(String photo) {
 		this.photo = photo;
 	}
+
+	public Date getJoinDate() {
+		return joinDate;
+	}
+
+	public void setJoinDate(Date joinDate) {
+		this.joinDate = joinDate;
+	}
+
+	public Date getLastLoginDate() {
+		return lastLoginDate;
+	}
+
+	public void setLastLoginDate(Date lastLoginDate) {
+		this.lastLoginDate = lastLoginDate;
+	}
+	
+	
 	
 }

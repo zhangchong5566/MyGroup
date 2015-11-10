@@ -13,12 +13,12 @@
 
 	<bean id="objectMapper" class="com.zhc.sys.service.CustomMapper">
 	</bean>
-	
+
 	<!-- 运营后台 -->
 	<bean id="scheduleService" class="com.zhc.schedule.quartz.service.ScheduleServiceImpl"
 		autowire="byName">
 	</bean>
-	
+
 	<bean id="sysUserService" class="com.zhc.sys.service.SysUserServiceImpl"
 		autowire="byName">
 	</bean>
@@ -28,23 +28,35 @@
 	<bean id="sysPopedomService" class="com.zhc.sys.service.SysPopedomServiceImpl"
 		autowire="byName">
 	</bean>
-	
+
 	<bean id="sysRoleService" class="com.zhc.sys.service.SysRoleServiceImpl"
 		autowire="byName">
 	</bean>
-	
+
+	<bean id="affixService" class="com.zhc.affix.service.AffixServiceImpl"
+		autowire="byName">
+	</bean>
+	<bean id="affixConfig" class="com.zhc.affix.service.AffixConfig">
+		<property name="baseDir" value="D:/ask_files" />
+		<property name="dirs">
+			<map>
+				<entry key="用户头像" value="member_photo" /><!-- 商品截图包 -->
+			</map>
+		</property>
+	</bean>
+
 	<bean id="askClassifyService" class="com.zhc.ask.service.AskClassifyServiceImpl"
 		autowire="byName">
 	</bean>
-	
+
 	<bean id="askMemberService" class="com.zhc.ask.service.AskMemberServiceImpl"
 		autowire="byName">
 	</bean>
-	
+
 	<bean id="askQuestionService" class="com.zhc.ask.service.AskQuestionServiceImpl"
 		autowire="byName">
 	</bean>
-	
+
 	<bean id="askAnswerService" class="com.zhc.ask.service.AskQuestionServiceImpl"
 		autowire="byName">
 	</bean>

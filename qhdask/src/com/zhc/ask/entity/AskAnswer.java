@@ -31,6 +31,8 @@ public class AskAnswer extends AbstractEntityGenerate implements Serializable{
 	private String answerContent;//回答内容
 	
 	private Integer status;//0-未采纳，1-已采纳
+	
+	private Integer hidden;//是否隐藏，0-显示，1-隐藏
 
 	public AskMember getMember() {
 		return member;
@@ -55,6 +57,14 @@ public class AskAnswer extends AbstractEntityGenerate implements Serializable{
 
 	public void setStatus(Integer status) {
 		this.status = status;
+	}
+
+	public Integer getHidden() {
+		return hidden;
+	}
+
+	public void setHidden(Integer hidden) {
+		this.hidden = hidden;
 	}
 	
 	

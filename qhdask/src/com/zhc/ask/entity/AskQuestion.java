@@ -32,6 +32,8 @@ public class AskQuestion extends AbstractEntityGenerate implements Serializable{
 	
 	private Integer status;//0-未解决，1-已解决
 	
+	private Integer hidden;//是否隐藏，0-显示，1-隐藏
+	
 	private String title;
 	
 	private String description;
@@ -85,6 +87,14 @@ public class AskQuestion extends AbstractEntityGenerate implements Serializable{
 
 	public void setStatus(Integer status) {
 		this.status = status;
+	}
+
+	public Integer getHidden() {
+		return hidden;
+	}
+
+	public void setHidden(Integer hidden) {
+		this.hidden = hidden;
 	}
 	
 	

@@ -30,7 +30,9 @@
 							<th>登录名</th>
 							<th>姓名</th>
 							<th>性别</th>
+							<th>从事专业</th>
 							<th>Email</th>
+							<th>联系电话</th>
 							<th>注册时间</th>
 							<th>最后登录时间</th>
 							<th>状态</th>
@@ -46,7 +48,7 @@
 	
 	myTable = $('#myTable').dataTable({
          "bServerSide": true,
-         "sAjaxSource": "${cxp}/manage/ask/listMember.do?member.role=1",   //mvc后台ajax调用接口。
+         "sAjaxSource": "${cxp}/manage/ask/listMember.do?member.role=2",   //mvc后台ajax调用接口。
          "sServerMethod": "POST",
          "ordering" : false,
          'bPaginate': true,                      //是否分页。
@@ -63,7 +65,9 @@
 				{ "mData": "loginName","bSortable": false},
 				{ "mData": "trueName","bSortable": false,"mRender":strDefRender},
 				{ "mData": "sex","bSortable": false,"mRender":strDefRender},
+				{ "mData": "currProfessional","bSortable": false,"mRender":strDefRender},
 				{ "mData": "email","bSortable": false,"mRender":strDefRender},
+				{ "mData": "telephone","bSortable": false,"mRender":strDefRender},
 				{ "mData": "joinDate","bSortable": false,"mRender":datetimeRender},
 				{ "mData": "lastLoginDate","bSortable": false,"mRender":datetimeRender},
 				{ "mData": "status","bSortable": false,
@@ -76,7 +80,7 @@
 	              	}},
 				{ "mData": "id","bSortable": false,
 					"mRender":function(data,type,full){
-						var s = "<a href='toEditNomarlMember.do?id="+data+"&TB_iframe=true&height=450&width=800'  class='btn mini edit' title='会员信息'><i class='icon-list'></i> 查看</a>";
+						var s = "<a href='toEditExpretMember.do?id="+data+"&TB_iframe=true&height=550&width=800'  class='btn mini edit' title='专家信息'><i class='icon-list'></i> 查看</a>";
 						if(full["status"]=="1"){
 							s += "&nbsp;&nbsp;<a class='btn mini green' href='javascript:void(0)' onclick='changeStatus("+data+",2)'> 审核通过</a>";
 						}else if(full["status"]=="2"){
