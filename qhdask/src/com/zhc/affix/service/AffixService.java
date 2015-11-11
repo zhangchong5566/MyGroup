@@ -51,6 +51,8 @@ public interface AffixService  extends BaseJpaServiceInterf {
 	 */
 	public void deleteByTypeAndOBjId(Integer type,String objId);
 	
+	public void deleteByAffixId(long id);
+	
 	public long findMaxId();
 	
 	

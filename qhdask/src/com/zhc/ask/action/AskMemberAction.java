@@ -4,12 +4,14 @@ import java.util.List;
 
 import javax.annotation.Resource;
 
+import org.apache.commons.lang3.StringUtils;
 import org.apache.struts2.convention.annotation.Action;
 import org.apache.struts2.convention.annotation.ParentPackage;
 import org.apache.struts2.convention.annotation.Result;
 import org.springframework.stereotype.Controller;
 
 import com.mysql.fabric.xmlrpc.base.Member;
+import com.zhc.affix.service.AffixService;
 import com.zhc.ask.entity.AskMember;
 import com.zhc.ask.service.AskMemberService;
 import com.zhc.sys.action.BaseAction;
@@ -20,6 +22,9 @@ public class AskMemberAction extends BaseAction {
 	
 	@Resource(name = AskMemberService.ID_NAME)
 	private AskMemberService memberService;
+	
+	@Resource(name = AffixService.ID_NAME)
+	private AffixService affixService;
 	
 	private List<AskMember> mlist;
 	
@@ -108,8 +113,13 @@ public class AskMemberAction extends BaseAction {
 			bean.setQqWeChart(member.getQqWeChart());
 			bean.setSchool(member.getSchool());
 			bean.setServicefall(member.getServicefall());
-			
 			memberService.update(bean);
+			
+			String objectId = super.getStr("objectId");
+			if(StringUtils.isNotBlank(objectId) && !StringUtils.equals(bean.getId()+"", objectId)){
+				affixService.updateAffixId(1, objectId, bean.getId()+"");
+			}
+			
 		}
 		
 		message = "保存成功！";

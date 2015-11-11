@@ -1,3 +1,4 @@
+<%@page import="java.util.UUID"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ include file="/include/tags.jsp"%>
@@ -36,7 +37,9 @@ table tr td{
 					<table>
 						<tr>
 							<td colspan="4">
-								
+								<c:set var="uuid" value="<%=UUID.randomUUID().toString()%>"/>
+								 <input type="hidden" name="objectId" value="${empty member.id ? uuid : member.id}">
+								<iframe src="${cxp }/affix/list.do?objectType=1&objectId=${empty member.id ? uuid : member.id}&action=update&num=1&img=1" width="200" height="300" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="auto" ></iframe>
 							</td>
 						</tr>
 						<tr>

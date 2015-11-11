@@ -40,7 +40,7 @@
 		<property name="baseDir" value="D:/ask_files" />
 		<property name="dirs">
 			<map>
-				<entry key="用户头像" value="member_photo" /><!-- 商品截图包 -->
+				<entry key="1" value="member_photo" /><!-- 会员头像 -->
 			</map>
 		</property>
 	</bean>

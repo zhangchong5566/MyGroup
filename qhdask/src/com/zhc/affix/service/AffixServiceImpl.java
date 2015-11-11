@@ -132,4 +132,21 @@ public class AffixServiceImpl extends BaseJpaService implements AffixService {
 		return list != null && list.size() > 0 ? list.get(0) : null;
 	}
 
+	@Override
+	public void deleteByAffixId(long id) {
+	
+		Affix bean = super.find(Affix.class, id);
+
+		// 说明数据库里没有此记录，那么删除文件
+		if (bean != null) {
+			File file = new File(bean.getSource());
+			if (!file.isDirectory()) {// 如果不是文件夹才删除
+				boolean b = file.delete();
+				System.out.println("删除" + bean.getSource() + ">>" + b);
+			}
+		}
+		super.delete(Affix.class, id);
+		
+	}
+
 }
