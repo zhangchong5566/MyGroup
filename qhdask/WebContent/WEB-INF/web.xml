@@ -41,13 +41,36 @@
 		</init-param>
 		<init-param>
 			<param-name>notCheckPath</param-name>
-			<param-value>/manage/login.jsp</param-value>
+			<param-value>/manage/login.jsp,/manage/login.do</param-value>
 		</init-param>
 	</filter>
 	<filter-mapping>
 		<filter-name>login</filter-name>
 		<url-pattern>/manage/*</url-pattern>
 		<url-pattern>/sys/*</url-pattern>
+	</filter-mapping>
+	
+		<!-- Login Filter，必须在struts2前面 -->
+	<filter>
+		<filter-name>weblogin</filter-name>
+		<filter-class>com.zhc.ask.web.action.filter.WebLoginFilter</filter-class>
+		<init-param>
+			<param-name>login_url</param-name>
+			<param-value>/login.jsp</param-value>
+		</init-param>
+		<init-param>
+			<param-name>Encode</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+		<init-param>
+			<param-name>notCheckPath</param-name>
+			<param-value></param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>weblogin</filter-name>
+		<url-pattern>/ucenter/*</url-pattern>
+		<url-pattern>/answer/*</url-pattern>
 	</filter-mapping>
 
 	<!-- struts2 Filter -->
@@ -56,7 +79,7 @@
 		<filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
 		<init-param>
 			<param-name>actionPackages</param-name>
-			<param-value>com.zhc.manage.action,com.zhc.sys.action</param-value>
+			<param-value>com.zhc.manage.action,com.zhc.sys.action,com.zhc.ask.web.action</param-value>
 		</init-param>
 	</filter>
 
@@ -83,6 +106,15 @@
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
+	<servlet>
+		<servlet-name>RandomCodeImage</servlet-name>
+		<servlet-class>com.zhc.servlet.RandomCodeImage
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RandomCodeImage</servlet-name>
+		<url-pattern>/servlet/randomCodeImage</url-pattern>
+	</servlet-mapping>
 
 	<servlet-mapping>
 		<servlet-name>appServlet</servlet-name>

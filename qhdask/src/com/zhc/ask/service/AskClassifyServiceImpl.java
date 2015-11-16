@@ -72,7 +72,7 @@ public class AskClassifyServiceImpl extends BaseJpaService  implements AskClassi
 
 		return super
 				.queryByJPQL(" select new AskClassify(d.id,d.name,d.description,d.orderBy,d.img,d.link,d.alias) from AskClassify d where d.parentObj.id= "
-						+ parentId + " order by d.orderby ");
+						+ parentId + " order by d.orderBy ");
 	}
 
 }

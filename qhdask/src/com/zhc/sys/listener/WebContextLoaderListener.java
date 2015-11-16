@@ -5,6 +5,7 @@ import javax.servlet.ServletContextEvent;
 import org.springframework.web.context.ContextLoaderListener;
 import org.springframework.web.context.support.WebApplicationContextUtils;
 
+import com.zhc.ask.web.action.WebBaseAction;
 import com.zhc.util.AppProps;
 import com.zhc.util.BeanUtil;
 
@@ -28,7 +29,8 @@ public class WebContextLoaderListener extends ContextLoaderListener {
 				(String) props.get("web_image_website"));
 		event.getServletContext().setAttribute("website_analytics",
 				(String) props.get("website_analytics"));
-
+		
+		WebBaseAction.updateContextClassify(event.getServletContext());
 	}
 
 }

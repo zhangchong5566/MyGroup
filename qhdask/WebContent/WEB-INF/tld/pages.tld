@@ -9,7 +9,7 @@
 	<info>Pages taglib</info>
 	<tag>
 		<name>pageForm</name>
-		<tagclass>com.zhc.web.tags.PagesFormTag</tagclass>
+		<tagclass>com.zhc.webtags.PagesFormTag</tagclass>
 		<bodycontent>JSP</bodycontent>
 		<attribute>
 			<name>name</name>

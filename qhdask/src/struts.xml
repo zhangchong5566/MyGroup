@@ -16,7 +16,7 @@
 	<!-- 默认后缀名 -->
 	<constant name="struts.action.extension" value="do,action" />
 	<!-- Struts Annotation -->
-	<constant name="actionPackages" value="com.zhc.sys.action,com.zhc.affix.action,com.zhc.manage.action" />
+	<constant name="actionPackages" value="com.zhc.sys.action,com.zhc.affix.action,com.zhc.ask.action,com.zhc.ask.web.action" />
 	<constant name="struts.multipart.maxSize" value="157286400" />
 	<constant name="struts.multipart.saveDir" value="/tmp"></constant>
 </struts>

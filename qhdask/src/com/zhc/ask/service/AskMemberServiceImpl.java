@@ -43,6 +43,26 @@ public class AskMemberServiceImpl extends BaseJpaService  implements AskMemberSe
 		return super.queryByJPQL("select count(m.id) "+jpql, jpql.toString(), params.toArray(), pages);
 	}
 
+	@Override
+	public AskMember login(String loginName, String password) {
+		
+		String jpql = "From AskMember m where (m.loginName=? or m.email=?) and m.password=?";
+		List<AskMember> list = super.queryByJPQL(jpql, new Object[]{loginName,loginName,password});
+		return list != null && list.size() > 0?list.get(0):null;
+	}
+
+	@Override
+	public boolean checkExistLoginName(String loginName, Long noCheckId) {
+		
+		String where = " loginName=? ";
+		if(noCheckId != null && noCheckId>0){
+			where += " and id<>"+noCheckId;
+		}
+		long count = super.getCountByWhere(AskMember.class, where, new Object[]{loginName});
+		
+		return count>0?true:false;
+	}
+
 	
 
 }

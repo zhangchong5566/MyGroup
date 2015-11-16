@@ -142,7 +142,7 @@
         uploadTpl: '<div class="edui-image-upload%%">' +
             '<span class="edui-image-icon"></span>' +
             '<form class="edui-image-form" method="post" enctype="multipart/form-data" target="up">' +
-            '<input style=\"filter: alpha(opacity=0);\" class="edui-image-file" type="file" hidefocus name="fileToUpload" accept="image/gif,image/jpeg,image/png,image/jpg,image/bmp"/>' +
+            '<input style=\"filter: alpha(opacity=0);\" class="edui-image-file" type="file" hidefocus name="file" accept="image/gif,image/jpeg,image/png,image/jpg,image/bmp"/>' +
             '</form>' +
 
             '</div>',
@@ -187,12 +187,15 @@
         uploadComplete: function(r){
             var me = this;
             try{
+            	
             	r = r.replace("<pre>","");
             	r = r.replace("</pre>","");
                 var json = eval('('+r+')');
+               
                 Base.callback(me.editor, me.dialog, json.url, json.state);
                 
             }catch (e){
+            	alert(e);
                 var lang = me.editor.getLang('image');
                 Base.callback(me.editor, me.dialog, '', (lang && lang.uploadError) || 'Error!');
             }

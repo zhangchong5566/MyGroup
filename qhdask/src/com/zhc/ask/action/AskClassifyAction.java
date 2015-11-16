@@ -12,6 +12,7 @@ import org.springframework.stereotype.Controller;
 
 import com.zhc.ask.entity.AskClassify;
 import com.zhc.ask.service.AskClassifyService;
+import com.zhc.ask.web.action.WebBaseAction;
 import com.zhc.sys.action.BaseAction;
 
 @Controller
@@ -107,6 +108,7 @@ public class AskClassifyAction extends BaseAction {
 			classifyService.create(classify);
 		}
 		
+		WebBaseAction.updateContextClassify(session.getServletContext());
 		message = "保存成功！";
 		return SUCCESS;
 	}
@@ -120,12 +122,11 @@ public class AskClassifyAction extends BaseAction {
 		if(cid > 0){
 			try {
 				classifyService.delete(AskClassify.class, cid);
+				WebBaseAction.updateContextClassify(request.getServletContext());
 				message = "删除成功！";
 			} catch (Exception e) {
 				message = "删除失败，请检查是否有下级分类，如果有，必须先删除下级.";
 			}
-			
-			
 		}
 		
 		return SUCCESS;

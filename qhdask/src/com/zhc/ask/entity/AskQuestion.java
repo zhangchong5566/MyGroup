@@ -3,10 +3,12 @@ package com.zhc.ask.entity;
 import static javax.persistence.AccessType.PROPERTY;
 
 import java.io.Serializable;
+import java.util.Date;
 
 import javax.persistence.Access;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonFilter;
@@ -30,9 +32,19 @@ public class AskQuestion extends AbstractEntityGenerate implements Serializable{
 	
 	private AskClassify classify;
 	
-	private Integer status;//0-未解决，1-已解决
+	private Integer status;//1-未解决，2-已解决
 	
-	private Integer hidden;//是否隐藏，0-显示，1-隐藏
+	private Integer hidden;//是否隐藏，1-显示，2-隐藏
+	
+	private Integer isopen;//是否公开，1-公开，2-不公开，不公开只有专家登录以后并且是审核同构的专家才可以看到
+	
+	private Long viewCount;//查看数量 
+	
+	private Integer replayCount=0;//回答数量
+	
+	private Date createDate;//提问时间
+	
+	private Date lastReplayDate;//最后回复时间
 	
 	private String title;
 	
@@ -40,6 +52,7 @@ public class AskQuestion extends AbstractEntityGenerate implements Serializable{
 	
 	private String askTag;//标签
 
+	@ManyToOne
 	public AskMember getMember() {
 		return member;
 	}
@@ -47,7 +60,7 @@ public class AskQuestion extends AbstractEntityGenerate implements Serializable{
 	public void setMember(AskMember member) {
 		this.member = member;
 	}
-
+	@ManyToOne
 	public AskClassify getClassify() {
 		return classify;
 	}
@@ -96,6 +109,47 @@ public class AskQuestion extends AbstractEntityGenerate implements Serializable{
 	public void setHidden(Integer hidden) {
 		this.hidden = hidden;
 	}
+
+	public Integer getReplayCount() {
+		return replayCount;
+	}
+
+	public void setReplayCount(Integer replayCount) {
+		this.replayCount = replayCount;
+	}
+
+	public Date getCreateDate() {
+		return createDate;
+	}
+
+	public void setCreateDate(Date createDate) {
+		this.createDate = createDate;
+	}
+
+	public Date getLastReplayDate() {
+		return lastReplayDate;
+	}
+
+	public void setLastReplayDate(Date lastReplayDate) {
+		this.lastReplayDate = lastReplayDate;
+	}
+
+	public Long getViewCount() {
+		return viewCount;
+	}
+
+	public void setViewCount(Long viewCount) {
+		this.viewCount = viewCount;
+	}
+
+	public Integer getIsopen() {
+		return isopen;
+	}
+
+	public void setIsopen(Integer isopen) {
+		this.isopen = isopen;
+	}
+
 	
 	
 

@@ -10,5 +10,5 @@
 <script>
 	var cxp = "${cxp}";
 	var web_url="${web_url}";
-	var image_website="${web_image_website}";
+	var image_website=cxp;
 </script>

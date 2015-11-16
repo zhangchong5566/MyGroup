@@ -75,6 +75,14 @@ public class AffixAction extends BaseAction {
 	 */
 	@Action(value = "/affix/uploadFile", results = { @Result(name = SUCCESS, location = "/affix/file_upload_ok.jsp") })
 	public String uploadFile() {
+		
+		affix = saveFile();
+		request.setAttribute("affix", affix);
+
+		return SUCCESS;
+	}
+	
+	private Affix saveFile(){
 		try {
 
 			Calendar c = Calendar.getInstance();
@@ -82,7 +90,7 @@ public class AffixAction extends BaseAction {
 
 			if (file == null) {
 				System.out.println("没有选择附件.");
-				return SUCCESS;
+				return null;
 
 			}
 
@@ -115,32 +123,30 @@ public class AffixAction extends BaseAction {
 //			// System.out.println(fileForm.getFile().getFileData().length);
 //			createFile(bin, bout);
 			
-			affix = new Affix();
-			affix.setObjectId(objectId);
-			affix.setObjectType(objectType);
-			affix.setSource(filePath + "/" + objId + "." + extendName);
+			Affix _affix = new Affix();
+			_affix.setObjectId(objectId);
+			_affix.setObjectType(objectType);
+			_affix.setSource(filePath + "/" + objId + "." + extendName);
 
 			System.out.println(file.length());
 			String fileSizeStr = AffixConfig.formetFileSize(file.length());
 
-			affix.setSize(fileSizeStr);
-			affix.setCreateDate(new Date());
+			_affix.setSize(fileSizeStr);
+			_affix.setCreateDate(new Date());
 
-			affix.setExtname(extendName.toLowerCase());
-			affix.setType(fileContentType);
-			affix.setName(fileFileName);
+			_affix.setExtname(extendName.toLowerCase());
+			_affix.setType(fileContentType);
+			_affix.setName(fileFileName);
 
-			affix.setPath(path);
-			affixService.create(affix);
-
-			request.setAttribute("affix", affix);
-
+			_affix.setPath(path);
+			affixService.create(_affix);
+			return _affix;
 		} catch (Exception ex) {
 			ex.printStackTrace();
 		}
-
-		return SUCCESS;
+		return null;
 	}
+	
 
 	/**
 	 * 查询附件列表
@@ -201,6 +207,34 @@ public class AffixAction extends BaseAction {
 		}
 		affixService.update(affix);
 
+	}
+	
+	@Action(value = "/uploadBaiduImg")
+	public void uploadBaiduImg() throws IOException {
+		response.setCharacterEncoding("utf-8");
+		
+		String callback = request.getParameter("callback");
+		String state = "SUCCESS";
+		affix = saveFile();
+		String fileUrl = "/affix/showImage.do?id="+affix.getId();
+		String result = "{\"name\":\"" + fileUrl + "\", \"originalName\": \""
+				+ affix.getName() + "\", \"size\": "
+				+ file.length() + ", \"state\": \"" + state
+				+ "\", \"type\": \""
+				+ affix.getExtname() + "\", \"url\": \""
+				+ fileUrl + "\"}";
+
+		result = result.replaceAll("\\\\", "\\\\");
+		// ajax返回数据
+		if (callback == null) {
+			response.getWriter().print("<pre>"+result+"</pre>");
+		} else {
+			response.getWriter().print(
+					"<script>" + callback + "(" + result + ")</script>");
+		}
+		
+		response.getWriter().flush();
+		response.getWriter().close();
 	}
 
 	/**

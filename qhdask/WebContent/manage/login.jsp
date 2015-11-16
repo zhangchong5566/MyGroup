@@ -41,7 +41,7 @@
 	<!-- BEGIN LOGIN -->
 	<div class="content">
 		<!-- BEGIN LOGIN FORM -->
-		<form action="${cxp}/login.do" method="post">
+		<form action="${cxp}/manage/login.do" method="post">
 			<h3 class="form-title">请输入你的帐号和密码</h3>
 			<div class="alert alert-error hide">
 				<button class="close" data-dismiss="alert"></button>

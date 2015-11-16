@@ -7,9 +7,7 @@
 <title>404</title>
 </head>
 <body>
-<%
 
-%>
-404!
+对不起，您访问的页面不存在！
 </body>
 </html>

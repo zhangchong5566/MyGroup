@@ -15,5 +15,7 @@ public interface AskClassifyService extends BaseJpaServiceInterf {
 	public abstract List<AskClassify> getTree(long rootId, Set<Long> classifyIds);
 
 	public abstract List<AskClassify> getClassifysByParentId(long id);
+	
+	
 
 }

@@ -11,6 +11,7 @@ import org.apache.struts2.convention.annotation.Action;
 import org.apache.struts2.convention.annotation.Result;
 import org.springframework.stereotype.Controller;
 
+import com.zhc.servlet.RandomCodeImage;
 import com.zhc.sys.entity.SysMenu;
 import com.zhc.sys.entity.SysPopedom;
 import com.zhc.sys.entity.SysRoleToSysMenu;
@@ -42,8 +43,8 @@ public class LoginAction extends BaseAction{
 	* @throws 
 	* @date 2014年7月24日 下午5:05:06
 	 */
-	@Action(value = "/login", results = { @Result(name = SUCCESS, type="redirect",location = "/manage/index.do"),
-			 @Result(name = "login", location = "/login.jsp")})
+	@Action(value = "/manage/login", results = { @Result(name = SUCCESS, type="redirect",location = "/manage/index.do"),
+			 @Result(name = "login", location = "/manage/login.jsp")})
 	public String login(){
 		
 		String loginName = super.getStr("loginName",null);
@@ -75,8 +76,9 @@ public class LoginAction extends BaseAction{
 		}
 		
 		List<SysMenu> menuTree = sysMenuService.getTree(1, menuIds);
-		
-		menuTree.remove(0);
+		if(menuTree.size() > 0){
+			menuTree.remove(0);
+		}
 		
 		super.setLoginSysUser(sysUser);
 		super.setPopedom(popedoms);
