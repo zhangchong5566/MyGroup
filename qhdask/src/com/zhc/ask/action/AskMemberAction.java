@@ -125,6 +125,23 @@ public class AskMemberAction extends BaseAction {
 		message = "保存成功！";
 		return SUCCESS;
 	}
+	
+	
+	@Action(value = "/manage/ask/recommend", results = { @Result(name = SUCCESS, type="json",params={"ignoreHierarchy","false"})})
+	public String recommend(){
+		
+		long id = super.getIntParamter("id", 0);
+		int rstatus = super.getIntParamter("rstatus", -1);
+		
+		if(id > 0 && rstatus > -1){
+			member = memberService.find(AskMember.class, id);
+			member.setRecommend(rstatus);
+			memberService.update(member);
+		}
+		
+		message = "Success";
+		return SUCCESS;
+	}
 
 	public List<AskMember> getMlist() {
 		return mlist;

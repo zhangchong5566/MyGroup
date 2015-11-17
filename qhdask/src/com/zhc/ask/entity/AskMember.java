@@ -35,6 +35,8 @@ public class AskMember  extends AbstractEntityGenerate implements Serializable{
 	
 	private Integer status;//状态，1-待审核（普通用户待审核不能提问，专家待审核不能回答问题），2-已审核
 	
+	private Integer recommend;//专家推荐状态，0-不推荐，1-推荐
+	
 	private String trueName;//姓名
 	
 	private String sex;//性别
@@ -281,6 +283,14 @@ public class AskMember  extends AbstractEntityGenerate implements Serializable{
 
 	public void setLastLoginDate(Date lastLoginDate) {
 		this.lastLoginDate = lastLoginDate;
+	}
+
+	public Integer getRecommend() {
+		return recommend;
+	}
+
+	public void setRecommend(Integer recommend) {
+		this.recommend = recommend;
 	}
 	
 	

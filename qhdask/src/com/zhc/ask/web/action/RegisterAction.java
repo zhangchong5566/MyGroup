@@ -55,6 +55,7 @@ public class RegisterAction extends WebBaseAction {
 			m.setJoinDate(new Date());
 			m.setRole(1);
 			m.setStatus(1);
+			m.setRecommend(0);
 			m.setPassword(Md5.getMD5Str(m.getPassword()));
 			memberService.create(m);
 			message = "Success";
@@ -91,6 +92,7 @@ public class RegisterAction extends WebBaseAction {
 			m.setJoinDate(new Date());
 			m.setRole(2);
 			m.setStatus(1);
+			m.setRecommend(0);
 			m.setPassword(Md5.getMD5Str(m.getPassword()));
 			memberService.create(m);
 			

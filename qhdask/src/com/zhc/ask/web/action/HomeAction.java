@@ -10,6 +10,7 @@ import org.apache.struts2.convention.annotation.ParentPackage;
 import org.apache.struts2.convention.annotation.Result;
 import org.springframework.stereotype.Controller;
 
+import com.zhc.ask.entity.AskMember;
 import com.zhc.ask.entity.AskQuestion;
 import com.zhc.ask.service.AskClassifyService;
 import com.zhc.ask.service.AskMemberService;
@@ -39,6 +40,8 @@ public class HomeAction extends WebBaseAction{
 	
 	private List<AskQuestion> unResolvedList;//待解决问题列表
 	
+	private List<Map> expertList;//推荐专家
+	
 	@Action(value = "/home", results = { @Result(name = SUCCESS, location = "/ask_home_nodirect.jsp") })
 	public String home() {
 		
@@ -59,6 +62,8 @@ public class HomeAction extends WebBaseAction{
 		pages.setPageSize(10);
 		sf.setStatus(2);
 		resolvedList = questionService.listQuestions(sf, pages);
+		
+		expertList = memberService.listRecommendExpert();
 		
 		return SUCCESS;
 	}
@@ -102,7 +107,15 @@ public class HomeAction extends WebBaseAction{
 	public void setUnResolvedList(List<AskQuestion> unResolvedList) {
 		this.unResolvedList = unResolvedList;
 	}
-	
+
+	public List<Map> getExpertList() {
+		return expertList;
+	}
+
+	public void setExpertList(List<Map> expertList) {
+		this.expertList = expertList;
+	}
+
 	
 	
 	

@@ -195,99 +195,22 @@
 						href="${cxp}/register_expert.jsp" class="sqzj">申请成为专家</a>
 				</h2>
 			</div>
-
+			
 			<div id="s1" class="scroll">
 				<a class="prev"></a>
 				<div class="box">
 					<div class="scroll_list">
 						<ul>
+							<c:forEach items="${expertList}" var="exp">
 							<li><h4>
-									<a href="#"><img src="images/wdb_22-08.jpg" width="125"
+									<a href="#"><img src="${cxp}/affix/showImage.do?id=${exp.affixId}" width="125"
 										height="128" /></a>
 								</h4>
 								<h5 class="infor">
-									<span class="blue">顾永玲 </span><br />专长：<a href="#">投资理财规划风险投资理财规划风险资投资理财规划风险投资
+									<span class="blue">${exp.trueName}</span><br />专长：<a href="#"><c:out value="${exp.personProfile}"/>
 									</a>
 								</h5></li>
-							<li>
-								<h4>
-									<a href="#"><img src="images/wdb_22.jpg" width="125"
-										height="128" /></a>
-								</h4>
-								<h5 class="infor">
-									<span class="blue">顾永玲 </span><br />专长：<a href="#">投资理财规划风险投资理财规划风险资投资理财规划风险投资
-									</a>
-								</h5>
-							</li>
-							<li>
-								<h4>
-									<a href="#"><img src="images/wdb_18-07.jpg" width="125"
-										height="128" /></a>
-								</h4>
-								<h5 class="infor">
-									<span class="blue">顾永玲 </span><br />专长：<a href="#">投资理财规划风险投资理财规划风险资投资理财规划风险投资
-									</a>
-								</h5>
-							</li>
-							<li><h4>
-									<a href="#"><img src="images/wdb_22-08.jpg" width="125"
-										height="128" /></a>
-								</h4>
-								<h5 class="infor">
-									<span class="blue">顾永玲 </span><br />专长：<a href="#">投资理财规划风险投资理财规划风险资投资理财规划风险投资
-									</a>
-								</h5></li>
-							<li>
-								<h4>
-									<a href="#"><img src="images/wdb_22.jpg" width="125"
-										height="128" /></a>
-								</h4>
-								<h5 class="infor">
-									<span class="blue">顾永玲 </span><br />专长：<a href="#">投资理财规划风险投资理财规划风险资投资理财规划风险投资
-									</a>
-								</h5>
-							</li>
-							<li>
-								<h4>
-									<a href="#"><img src="images/wdb_18-07.jpg" width="125"
-										height="128" /></a>
-								</h4>
-								<h5 class="infor">
-									<span class="blue">顾永玲 </span><br />专长：<a href="#">投资理财规划风险投资理财规划风险资投资理财规划风险投资
-									</a>
-								</h5>
-							</li>
-							<li><h4>
-									<a href="#"><img src="images/wdb_22-08.jpg" width="125"
-										height="128" /></a>
-								</h4>
-								<h5 class="infor">
-									<span class="blue">顾永玲 </span><br />专长：<a href="#">投资理财规划风险投资理财规划风险资投资理财规划风险投资
-									</a>
-								</h5></li>
-							<li>
-								<h4>
-									<a href="#"><img src="images/wdb_22.jpg" width="125"
-										height="128" /></a>
-								</h4>
-								<h5 class="infor">
-									<span class="blue">顾永玲 </span><br />专长：<a href="#">投资理财规划风险投资理财规划风险资投资理财规划风险投资
-									</a>
-								</h5>
-							</li>
-							<li>
-								<h4>
-									<a href="#"><img src="images/wdb_18-07.jpg" width="125"
-										height="128" /></a>
-								</h4>
-								<h5 class="infor">
-									<span class="blue">顾永玲 </span><br />专长：<a href="#">投资理财规划风险投资理财规划风险资投资理财规划风险投资
-									</a>
-								</h5>
-							</li>
-
-
-
+							</c:forEach>
 						</ul>
 					</div>
 				</div>

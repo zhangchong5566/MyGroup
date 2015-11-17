@@ -1,6 +1,7 @@
 package com.zhc.ask.service;
 
 import java.util.List;
+import java.util.Map;
 
 import com.zhc.ask.entity.AskMember;
 import com.zhc.sys.service.base.BaseJpaServiceInterf;
@@ -21,5 +22,11 @@ public interface AskMemberService  extends BaseJpaServiceInterf {
 	 * @return
 	 */
 	public boolean checkExistLoginName(String loginName,Long noCheckId);
+	
+	/**
+	 * 查询推荐的专家
+	 * @return
+	 */
+	public List<Map> listRecommendExpert();
 
 }

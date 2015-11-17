@@ -52,6 +52,8 @@
          "sServerMethod": "POST",
          "ordering" : false,
          'bPaginate': true,                      //是否分页。
+         "scrollX": true,
+         "sScrollXInner": "110%",
          "bProcessing": true,                    //当datatable获取数据时候是否显示正在处理提示信息。
          'bFilter': false,                       //是否使用内置的过滤功能。
          'bLengthChange': true,                  //是否允许用户自定义每页显示条数。
@@ -85,6 +87,11 @@
 							s += "&nbsp;&nbsp;<a class='btn mini green' href='javascript:void(0)' onclick='changeStatus("+data+",2)'> 审核通过</a>";
 						}else if(full["status"]=="2"){
 							s += "&nbsp;&nbsp;<a class='btn mini red' href='javascript:void(0)' onclick='changeStatus("+data+",1)'> 取消审核</a>";
+						}
+						if(full["recommend"]!=null&&full["recommend"]==1){
+							s += "&nbsp;&nbsp;<a class='btn mini red' href='javascript:void(0)' onclick='recommend("+data+",0)'> 取消推荐</a>";
+						}else{
+							s += "&nbsp;&nbsp;<a class='btn mini red' href='javascript:void(0)' onclick='recommend("+data+",1)'> 推荐到首页</a>";
 						}
 	              		return s;
 	              	}
@@ -141,6 +148,24 @@
 	         });
 		}
 		
+	}
+	
+	function recommend(id,rstatus){
+		s = rstatus==1?"推荐":"取消推荐";
+		if(confirm("确定"+s+"吗?")){
+			$.ajax({
+	             type: "POST",
+	             url: "recommend.do",
+	             data: {"id":id,"rstatus":rstatus},
+	             dataType: "json",
+	             success: function(data){
+	                  if(data.message.indexOf("Success")>-1){
+	                	  alert(s+"成功！");
+	                	  myTable.fnDraw();
+	                  }
+	             }
+	         });
+		}
 	}
 
 </script>

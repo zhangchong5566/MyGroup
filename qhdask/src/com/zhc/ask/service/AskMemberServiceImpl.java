@@ -2,6 +2,7 @@ package com.zhc.ask.service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import org.apache.commons.lang3.StringUtils;
 
@@ -19,25 +20,19 @@ public class AskMemberServiceImpl extends BaseJpaService  implements AskMemberSe
 		if(bean != null){
 			
 			if(StringUtils.isNotBlank(bean.getLoginName())){
-				if(jpql.length() > 0){
-					jpql.append(" AND ");
-				}
-				jpql.append("(m.loginName like ? OR m.trueName like ? OR m.email like ?)");
+				jpql.append(" AND (m.loginName like ? OR m.trueName like ? OR m.email like ?)");
 				params.add("%"+bean.getLoginName()+"%");
 				params.add("%"+bean.getLoginName()+"%");
 				params.add("%"+bean.getLoginName()+"%");
 			}
 			
 			if(bean.getRole() != null && bean.getRole() > 0){
-				if(jpql.length() > 0){
-					jpql.append(" AND ");
-				}
-				jpql.append("m.role=?");
+				jpql.append(" AND m.role=?");
 				params.add(bean.getRole());
 			}
 			
 		}
-		jpql.insert(0, "FROM AskMember m WHERE ");
+		jpql.insert(0, "FROM AskMember m WHERE 1=1 ");
 		jpql.append(" ORDER BY m.id DESC");
 		
 		return super.queryByJPQL("select count(m.id) "+jpql, jpql.toString(), params.toArray(), pages);
@@ -61,6 +56,14 @@ public class AskMemberServiceImpl extends BaseJpaService  implements AskMemberSe
 		long count = super.getCountByWhere(AskMember.class, where, new Object[]{loginName});
 		
 		return count>0?true:false;
+	}
+
+	@Override
+	public List<Map> listRecommendExpert() {
+		
+		String jpql = "select m.*,a.id as affixId from ask_member m left join affix a on a.objectId=m.id and a.objectType=1 where m.role=2 and m.recommend=1";
+		
+		return super.queryBySQL2(jpql);
 	}
 
 	
