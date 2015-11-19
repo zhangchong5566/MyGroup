@@ -191,7 +191,7 @@
 			<div class="extit">
 				<h1>推荐专家</h1>
 				<h2>
-					<a href="#" class="link_more">更多专家</a>&nbsp;&nbsp;&nbsp; <a
+					<a href="${cxp}/experts.do" class="link_more">更多专家</a>&nbsp;&nbsp;&nbsp; <a
 						href="${cxp}/register_expert.jsp" class="sqzj">申请成为专家</a>
 				</h2>
 			</div>
@@ -203,11 +203,11 @@
 						<ul>
 							<c:forEach items="${expertList}" var="exp">
 							<li><h4>
-									<a href="#"><img src="${cxp}/affix/showImage.do?id=${exp.affixId}" width="125"
+									<a href="${cxp}/viewExpert.do?id=${exp.id}"><img src="${cxp}/affix/showImage.do?id=${exp.affixId}" width="125"
 										height="128" /></a>
 								</h4>
 								<h5 class="infor">
-									<span class="blue">${exp.trueName}</span><br />专长：<a href="#"><c:out value="${exp.personProfile}"/>
+									<span class="blue"><a href="${cxp}/viewExpert.do?id=${exp.id}">${exp.trueName}</a></span><br />专长：<a href="${cxp}/viewExpert.do?id=${exp.id}"><c:out value="${exp.personProfile}"/>
 									</a>
 								</h5></li>
 							</c:forEach>

@@ -26,7 +26,12 @@
 				<%@ include file="/include/top.jsp"%>
 
 				<div class="clear"></div>
-
+				<div>
+					<ul id="breadcrumbs-one">
+						<li><a href="${cxp}/">首页</a></li>
+						<li><a href="" class="current">问题搜索</a></li>
+					</ul>
+				</div>
 				<div class="search">
 					<div class="stubiao">问题搜索</div>
 					<div class="searchbox">
@@ -37,8 +42,8 @@
 								<option value="2" ${sf.status==2?'selected':''}>已解决</option>
 							</select>
 							<input name="sf.key" type="text" class="sbox"
-								placeholder="请入问题关键字" align="absmiddle" value="<c:out value='${sf.key}'/>"/><input name=""
-								type="submit" class="sbtn" value="" />
+								placeholder="请输入问题关键字" align="absmiddle" value="<c:out value='${sf.key}'/>"/><input name=""
+								type="submit" class="sbtn" value=" "/>
 						</form>
 					</div>
 				</div>

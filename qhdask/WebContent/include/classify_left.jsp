@@ -47,9 +47,9 @@
 		<div class="qahelp">
 			<h2>问答帮助中心</h2>
 			<ul class="helplist">
-				<li><a href="#">怎么使用平台问答宝？</a></li>
-				<li><a href="#">使用问答宝的好片？</a></li>
-				<li><a href="#"> 科技创新服务中心简介</a></li>
+				<li><a href="${cxp}/article.do?id=1">怎么使用平台问答宝？</a></li>
+				<li><a href="${cxp}/article.do?id=2">使用问答宝的好片？</a></li>
+				<li><a href="${cxp}/article.do?id=3"> 科技创新服务中心简介</a></li>
 			</ul>
 		</div>
 	</div>

@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.zhc.ask.entity.AskMember;
+import com.zhc.ask.web.action.form.SearchForm;
 import com.zhc.sys.service.base.BaseJpaServiceInterf;
 import com.zhc.sys.service.base.Pages;
 
@@ -28,5 +29,13 @@ public interface AskMemberService  extends BaseJpaServiceInterf {
 	 * @return
 	 */
 	public List<Map> listRecommendExpert();
+	
+	/**
+	 * 查询所有专家
+	 * @param form
+	 * @param pages
+	 * @return
+	 */
+	public List<Map> listExperts(SearchForm form,Pages pages);
 
 }

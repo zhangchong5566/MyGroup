@@ -7,6 +7,7 @@ import java.util.Map;
 import org.apache.commons.lang3.StringUtils;
 
 import com.zhc.ask.entity.AskMember;
+import com.zhc.ask.web.action.form.SearchForm;
 import com.zhc.sys.service.base.BaseJpaService;
 import com.zhc.sys.service.base.Pages;
 
@@ -61,9 +62,24 @@ public class AskMemberServiceImpl extends BaseJpaService  implements AskMemberSe
 	@Override
 	public List<Map> listRecommendExpert() {
 		
-		String jpql = "select m.*,a.id as affixId from ask_member m left join affix a on a.objectId=m.id and a.objectType=1 where m.role=2 and m.recommend=1";
+		String sql = "select m.*,a.id as affixId from ask_member m left join affix a on a.objectId=m.id and a.objectType=1 where m.status=2 and m.role=2 and m.recommend=1";
 		
-		return super.queryBySQL2(jpql);
+		return super.queryBySQL2(sql);
+	}
+
+	@Override
+	public List<Map> listExperts(SearchForm form, Pages pages) {
+		String sql = "select m.*,a.id as affixId from ask_member m left join affix a on a.objectId=m.id and a.objectType=1 where m.status=2 and m.role=2 ";
+		List params = new ArrayList();
+		if(form != null){
+			if(StringUtils.isNotBlank(form.getKey())){
+				sql += " and (m.loginName like ? or m.trueName like ?)";
+				params.add("%"+form.getKey()+"%");
+				params.add("%"+form.getKey()+"%");
+			}
+		}
+		String countSQL = "select count(t.id) from ("+sql+") t";
+		return super.queryBySQL2(countSQL, sql+" order by m.recommend desc,m.id desc", params.toArray(), pages);
 	}
 
 	

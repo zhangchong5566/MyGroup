@@ -60,5 +60,9 @@
 	<bean id="askAnswerService" class="com.zhc.ask.service.AskQuestionServiceImpl"
 		autowire="byName">
 	</bean>
+	<bean id="articleService" class="com.zhc.article.service.ArticleServiceImpl"
+		autowire="byName">
+	</bean>
+	
 
 </beans>

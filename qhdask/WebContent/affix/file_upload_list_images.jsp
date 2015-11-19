@@ -10,7 +10,7 @@
 		<tr>
 			<c:forEach var="affix" items="${beans}">
 				<td><img alt="<c:out value="${affix.name}" />"
-					src="showImage.do?id=${affix.id }" width="180px">
+					src="showImage.do?id=${affix.id }" width="125px" height="128px">
 					<c:if test="${param.action=='update'}">
 						<a href="javascript:delAffix(${affix.id })">删除</a>
 					</c:if></td>
