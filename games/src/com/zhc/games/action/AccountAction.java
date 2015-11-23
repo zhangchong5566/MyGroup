@@ -217,7 +217,7 @@ public class AccountAction extends BaseAction {
 		String userTag = super.getStr("userTag");
 		Long gameId = super.getLongParamter("gameId", 0);
 		int adindex = super.getIntParamter("adindex", -1);
-		
+		response.setHeader("Content-type", "text/plain;charset=UTF-8");  
 		account = accountService.getAccount(gameId,userTag);
 		AccountDetail detail = accountService.getDetail(account.getId(), adindex);
 		try {
