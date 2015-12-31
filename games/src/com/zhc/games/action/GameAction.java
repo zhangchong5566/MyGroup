@@ -108,7 +108,7 @@ public class GameAction extends BaseAction {
 		if(form == null){
 			form = new ActionForm();
 		}
-		
+		System.out.printf("=============");
 		if(this.getiSortCol_0() != null && this.getiSortCol_0() > -1){
 			form.setSortName(super.getStr("mDataProp_"+this.getiSortCol_0()));
 			form.setSortType(this.getsSortDir_0());

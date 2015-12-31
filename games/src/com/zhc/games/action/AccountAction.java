@@ -1,27 +1,27 @@
 package com.zhc.games.action;
 
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import com.sun.org.apache.bcel.internal.generic.NEW;
+import com.zhc.games.action.form.ActionForm;
+import com.zhc.games.entity.Account;
+import com.zhc.games.entity.AccountDetail;
+import com.zhc.games.entity.Game;
+import com.zhc.games.service.AccountService;
+import com.zhc.games.service.GameService;
+import com.zhc.sys.action.BaseAction;
+import com.zhc.util.DateUtil;
 
-import javax.annotation.Resource;
-
-import org.apache.commons.lang3.StringUtils;
 import org.apache.struts2.convention.annotation.Action;
 import org.apache.struts2.convention.annotation.ParentPackage;
 import org.apache.struts2.convention.annotation.Result;
 import org.springframework.stereotype.Controller;
 
-import com.zhc.games.action.form.ActionForm;
-import com.zhc.games.entity.Account;
-import com.zhc.games.entity.AccountDetail;
-import com.zhc.games.entity.Game;
-import com.zhc.games.entity.SerialNumber;
-import com.zhc.games.service.AccountService;
-import com.zhc.games.service.GameService;
-import com.zhc.sys.action.BaseAction;
-import com.zhc.util.DateUtil;
+import javax.annotation.Resource;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
 @Controller
 @ParentPackage("json-default")  
 public class AccountAction extends BaseAction {
@@ -53,13 +53,11 @@ public class AccountAction extends BaseAction {
 		if(form == null){
 			form = new ActionForm();
 		}
-		
 		if(this.getiSortCol_0() != null && this.getiSortCol_0() > -1){
 			form.setSortName(super.getStr("mDataProp_"+this.getiSortCol_0()));
 			form.setSortType(this.getsSortDir_0());
 		}
 		accountList = accountService.listAccount(form, super.getReqPages());
-		
 		return SUCCESS;
 	}
 	
@@ -177,7 +175,7 @@ public class AccountAction extends BaseAction {
 	public void updateCurrIndex(){
 		String userTag = super.getStr("userTag");
 		Long gameId = super.getLongParamter("gameId", 0);
-		
+		System.out.println(DateUtil.formatDate(new Date(), "yyyy-MM-dd HH:mm:ss")+"updateCurrIndex>>userTag:"+userTag+", gameId:"+gameId);
 		
 		try {
 			account = accountService.getAccount(gameId,userTag);
@@ -201,7 +199,7 @@ public class AccountAction extends BaseAction {
 	public void getCurrIndex(){
 		String userTag = super.getStr("userTag");
 		Long gameId = super.getLongParamter("gameId", 0);
-		
+		System.out.println(DateUtil.formatDate(new Date(), "yyyy-MM-dd HH:mm:ss")+"getCurrIndex>>userTag:"+userTag+", gameId:"+gameId);
 		account = accountService.getAccount(gameId,userTag);
 		
 		try {
@@ -217,6 +215,7 @@ public class AccountAction extends BaseAction {
 		String userTag = super.getStr("userTag");
 		Long gameId = super.getLongParamter("gameId", 0);
 		int adindex = super.getIntParamter("adindex", -1);
+		System.out.println(DateUtil.formatDate(new Date(), "yyyy-MM-dd HH:mm:ss")+"getAccounts>>userTag:"+userTag+", gameId:"+gameId+", adindex:"+adindex);
 		response.setHeader("Content-type", "text/plain;charset=UTF-8");  
 		account = accountService.getAccount(gameId,userTag);
 		AccountDetail detail = accountService.getDetail(account.getId(), adindex);

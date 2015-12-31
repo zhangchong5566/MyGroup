@@ -872,3 +872,54 @@ h1.user-form__title {
 #breadcrumbs-one .current::before{
   content: normal; 
 }
+
+/**new login**/
+
+.tiwen{ color:#333; }
+.bigtext{font-size:16px;}
+.twtextbox{ height:30px; line-height:30px; padding:0 5px;border-radius:3px; width:550px; border:1px solid #d6d6d6; color:#333;font-family:microsoft yahei;}
+.twtextear{ padding:5px;border-radius:3px; width:550px; border:1px solid #d6d6d6; color:#333; font-family:microsoft yahei;}
+.twbtn{ background:#00ad82; color:#fff; height:30px; line-height:30px; border:none; padding:0 20px; font-size:14px; border-radius:3px; cursor:pointer;}
+.twbtn:hover{ background:#2970c5; color:#fff; height:30px; line-height:30px; border:none; padding:0 20px; font-size:14px; border-radius:3px; cursor:pointer;}
+
+.wtclass{ background:#f4f4f4; border:#d6d6d6 solid 1px; padding:10px; height:320px; width:170px; float:left; overflow:auto; border-radius:3px;}
+.wtclass li{ line-height:30px; font-size:14px;}
+.wtclass li a{ display:block; color:#333; padding-left:3px;}
+.wtclass li a:hover{ display:block; background:#d2d2d2; color:#000; padding-left:3px;}
+.wtclass li a.act{ display:block; background:#f29641; color:#fff; padding-left:3px;}
+.tdbtn{ float:left; width:70px; text-align:center; margin-top:120px;}
+.tdbtn input{ height:60px; width:30px; border:#266bac 1px solid; color:#266bac; border-radius:3px; cursor:pointer; background:#fff; font-size:14px;}
+.tdbtn input:hover{ height:60px; width:30px; border:#269eac 1px solid; color:#266bac; border-radius:3px; cursor:pointer; background:#c0daef}
+.tjbtn{ background:url(../images/tjbtn.jpg) no-repeat; width:194px; height:49px; font-size:18px; text-align:center; color:#fff; border:none; cursor:pointer}
+
+.logincon{ padding:30px; height:100%; overflow:hidden;}
+.loginleft{ float:left; width:600px;}
+.loginleft .menu{ height:40px; line-height:40px; background:#f4f5f7; border:#d1d2d4 solid 1px;}
+.loginleft .menu li{ display:block; float:left;  font-size:20px;}
+.loginleft .menu li a{width:299px; text-align:center; display:block; float:left; color:#1f5fa6;}
+.loginleft .menu li a:hover{ background:#e0e5f0}
+.loginleft .menu li a.act{  display:block; float:left; color:#fff; background:#1f5fa6;}
+
+.login{ padding:20px;}
+.promptbox{ background:url(../images/tis.png) no-repeat left; line-height:22px; font-size:12px; height:28px; padding:0 5px; width:274px; margin-left:130px;border-radius:3px;}
+.errorbox{ background:url(../images/errorbox.png) no-repeat left; line-height:22px; font-size:12px; height:28px; padding:0 5px 0 25px; width:274px; margin-left:130px;border-radius:3px; color:#f00}
+
+.slbox{ padding:5px 0 15px 0; height:100%; overflow:hidden; clear:both}
+.slbox span{ width:120px; display:block; float:left; font-size:14px; line-height:37px; text-align:right; margin-right:10px;}
+.wbkbox{ float:left;}
+.wbkbox input{ height:35px; border:#cfcfcf solid 1px; padding:0 5px;border-radius:5px;}
+.textwidth{ width:282px;}
+
+.loginbtn{ margin:50px 25px 20px 0; text-align:center;}
+.dlbtn{ width:100px; height:35px; line-height:35px; font-size:14px; color:#fff; background:#1f5fa6; cursor:pointer; border:none;}
+.dlbtn:hover{ background:#1d4d9c;}
+
+.loginright{ float:right; width:373px; border-left:#ccc solid 1px; background:url(../images/loginbj.png) no-repeat left bottom; height:530px; text-align:left; padding-top:50px;}
+
+a.link_yellowblock:link,a.link_yellowblock:visited,a.link_yellowblock:active
+{ color:#fff; height:26px; line-height:26px; background:#f1a328; padding:0 15px; margin-left:15px; display:inline-block;
+}
+a.link_yellowblock:hover
+{ display:inline-block; background:#f18728 }
+
+.righttext{ margin-left:25px;}
