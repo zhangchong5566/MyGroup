@@ -28,12 +28,12 @@
 		});
 		$.imgscreenmove({
 			parentobj : '#s1',
-			snum : 7,
+			snum : 3,
 			autotime : 5
 		});//自动滚动 autotime 5为速度
 		$.imgscreenmove({
 			parentobj : '#s2',
-			snum : 7
+			snum : 3
 		});//点击滚动 snum  为一页7张
 
 	});
@@ -207,7 +207,7 @@
 										height="128" /></a>
 								</h4>
 								<h5 class="infor">
-									<span class="blue"><a href="${cxp}/viewExpert.do?id=${exp.id}">${exp.trueName}</a></span><br />专长：<a href="${cxp}/viewExpert.do?id=${exp.id}"><c:out value="${exp.personProfile}"/>
+									<span class="blue"><a href="${cxp}/viewExpert.do?id=${exp.id}">${exp.trueName}</a></span><br />专长：<a href="${cxp}/viewExpert.do?id=${exp.id}" title="<c:out value="${exp.personProfile}"/>"><c:out value="${exp.personProfile}"/>
 									</a>
 								</h5></li>
 							</c:forEach>
