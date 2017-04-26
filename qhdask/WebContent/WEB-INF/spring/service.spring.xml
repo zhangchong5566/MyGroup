@@ -37,7 +37,7 @@
 		autowire="byName">
 	</bean>
 	<bean id="affixConfig" class="com.zhc.affix.service.AffixConfig">
-		<property name="baseDir" value="D:/ask_files" />
+		<property name="baseDir" value="E:/java/ask_files" />
 		<property name="dirs">
 			<map>
 				<entry key="1" value="member_photo" /><!-- 会员头像 -->
