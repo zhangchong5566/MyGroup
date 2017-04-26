@@ -94,6 +94,15 @@ table tr td{
 	</form>
 	<div id="content" style="display:none">${abean.acontent}</div>
 	<script type="text/javascript">
+	if (typeof(toolbar) == "undefined") { 
+		var toolbar = new Array('source | undo redo | bold italic underline strikethrough | superscript subscript | forecolor backcolor | removeformat |',
+	            'insertorderedlist insertunorderedlist | selectall cleardoc paragraph | fontfamily fontsize' ,
+	            '| justifyleft justifycenter justifyright justifyjustify |',
+	            'link unlink | emotion image video ',
+	            '| horizontal print preview fullscreen', 'drafts', 'formula');
+	}
+	
+	
 		var um = UM.getEditor('uEditor', toolbar);
 		um.setContent($("#content").html());
 		$('#form1').ajaxForm({
