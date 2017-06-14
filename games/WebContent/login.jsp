@@ -17,8 +17,6 @@
 
 <link href="${cxp}/js/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 <link href="${cxp}/css/metro.css" rel="stylesheet" />
-<link href="${cxp}/css/font-awesome-4.1.0/css/font-awesome.css"
-	rel="stylesheet" />
 <link href="${cxp}/css/style.css" rel="stylesheet" />
 <link href="${cxp}/css/style_responsive.css" rel="stylesheet" />
 <link href="${cxp}/css/style_default.css" rel="stylesheet"
